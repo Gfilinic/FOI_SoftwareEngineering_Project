@@ -31,4 +31,11 @@ CP07 | "Add to the cart"| User will be able to add more different pizzas and num
 CP08 | Time till arrival| User will see the estimated time before the pizza arrives too him | x
 
 ## Technology and equipment
-Umjesto ovih uputa jasno popišite sve tehnologije, alate i opremu koju ćete koristiti pri implementaciji vašeg rješenja. Ne zaboravite planirati korištenje tehnologija u aktivnostima kao što su projektni menadžment ili priprema dokumentacije. Tehnologije koje ćete koristiti bi trebale biti javno dostupne, a ako ih ne budemo obrađivali na vježbama u vašoj dokumentaciji ćete morati navesti način preuzimanja, instaliranja i korištenja onih tehnologija koje su neopbodne kako bi se vaš programski proizvod preveo i pokrenuo. Pazite da svi alati koje ćete koristiti moraju imati odgovarajuću licencu.
+We will be using the following technology:
+1. --> GitHub
+2. --> Visual Studio 2019
+3. --> Differ
+4. --> Microsoft Word 2019
+5. --> Draw.io
+
+GitHub will be our main "headquarters", the place where we will keep track of our work by uploading whenever we do something on our project. Visual Studio 2019 is programming environment where we will be coding our program in C#. In Differ we as team will comunicate and inform each other about deadlines and similar stuff. In Microsoft Word 2019 we will document most of the stuff that we do. In Draw.io we will draw tables, diagram and other stuff that pops along our way.
