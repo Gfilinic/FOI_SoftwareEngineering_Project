@@ -20,10 +20,10 @@ Project will have the following functionalities:
 
 ID | Name | Short description | Responsible team member
 ------ | ----- | ----------- | -------------------
-CP01 | Adding new ingridients| Admin will be able to add new ingredients that customers will be able to choose | x
+CP01 | Adding new ingridients| Admin will be able to add new ingredients that customers will be able to choose | Tomislav Bračić
 CP02 | Changing the properties of ingridients| Admin will be able to change properties of ingredients by adding instances, removing instances, or changing the price   | x
-CP03 | Statistic graphs on ingridients| Admin will be able to see which of his ingredients are bought up the most  and will be able to compare any 2 ingredients | x
-CP04 | Statistic graphs on sales| Admin will be able to see his sale history on specific days and specific times of day | x
+CP03 | Statistic graphs on ingridients| Admin will be able to see which of his ingredients are bought up the most  and will be able to compare any 2 ingredients | Tomislav Bračić
+CP04 | Statistic graphs on sales| Admin will be able to see his sale history on specific days and specific times of day | Tomislav Bračić
 CP05 | User registration| Users will be able to register to the site | x
 CP06 | User and admin profile changes| Both admin and the user will be able to change their passwords and their e-mail | x
 CP07 | Choosing ingridients| User will be able to choose ingredients for his very specific pizza | x
@@ -38,5 +38,7 @@ We will be using the following technology:
 3.  Differ
 4.  Microsoft Word 2019
 5.  Draw.io
+6.  MySQL
+7.  MySQL Server
 
-GitHub will be our main "headquarters", the place where we will keep track of our work by uploading whenever we do something on our project. Visual Studio 2019 is programming environment where we will be coding our program in C#. In Differ we as team will comunicate and inform each other about deadlines and similar stuff. In Microsoft Word 2019 we will document most of the stuff that we do. In Draw.io we will draw tables, diagram and other stuff that pops along our way.
+GitHub will be our main "headquarters", the place where we will keep track of our work by uploading whenever we do something on our project. Visual Studio 2019 is programming environment where we will be coding our program in C#. In Differ we as team will comunicate and inform each other about deadlines and similar stuff. In Microsoft Word 2019 we will document most of the stuff that we do. In Draw.io we will draw tables, diagram and other stuff that pops along our way. We will make our database in MySQL and run it on the MySQL Server.
