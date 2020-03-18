@@ -13,12 +13,15 @@ Nakon vaše prijave bit će vam dodijeljen mentor s kojim ćete tijekom semestra
 # Naziv projekta
 (u redak iznad navedite kratki proizvoljni naziv projekta prikladan akademskoj zajednici, a ovaj tekst obrišite)
 
-## Projektni tim
+## Project Team
 
-Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
+Name & Surname | E-mail adress (FOI) | JMBAG | Github username
 ------------  | ------------------- | ----- | ---------------------
-Ime i prezime | mojaadresa@foi.hr | 000000000 | githubuser
-Ime i prezime | ... | ... | ...
+Clement Connan | cconnan@foi.hr | 000000000 | ClementConn
+Luka Mrkonjić | lmrkonjic@foi.hr | 0016129448 | lukamrko
+Goran Filinić | gfilinic@foi.hr | 0016124457 | Gfilinic
+Tomislav Bračić | tbracic@foi.hr | 0016123150 | tbracic
+Stjepan Janković | sjankovic@foi.hr | 0016132263 | Sjankovic913
 
 ## Opis domene
 Umjesto ovih uputa opišite domenu ili problem koji pokrivate vašim  projektom. Domena može biti proizvoljna, ali obratite pozornost da sukladno ishodima učenja, domena omogući primjenu zahtijevanih koncepata kako je to navedeno u sljedećem poglavlju. Priložite odgovarajuće skice gdje je to prikladno.
