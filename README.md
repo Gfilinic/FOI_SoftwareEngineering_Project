@@ -32,10 +32,11 @@ CP08 | Time till arrival| User will see the estimated time before the pizza arri
 
 ## Technology and equipment
 We will be using the following technology:
-1. --> GitHub
-2. --> Visual Studio 2019
-3. --> Differ
-4. --> Microsoft Word 2019
-5. --> Draw.io
+
+1.  GitHub
+2.  Visual Studio 2019
+3.  Differ
+4.  Microsoft Word 2019
+5.  Draw.io
 
 GitHub will be our main "headquarters", the place where we will keep track of our work by uploading whenever we do something on our project. Visual Studio 2019 is programming environment where we will be coding our program in C#. In Differ we as team will comunicate and inform each other about deadlines and similar stuff. In Microsoft Word 2019 we will document most of the stuff that we do. In Draw.io we will draw tables, diagram and other stuff that pops along our way.
