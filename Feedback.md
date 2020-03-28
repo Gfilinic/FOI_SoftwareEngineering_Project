@@ -9,4 +9,5 @@ I kind ask your software architecture to be based on centralized database (acces
 2. Please make your reports, bills and other document exportable to PDF.
 3. Please ensure the possibility of sending the proper documents (e.g. bills) to e-mail of user. 
 4. Please create the possibility of sending the user an email (or in app) notification that his pizza is ready and with planned delivery time.
+
 Please update your proposal and define team member responsibilities as soon as possible. Please try to make every team member has the approximately the same amount of work.
