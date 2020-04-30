@@ -24,11 +24,11 @@ CP01 | Adding new ingridients| Admin will be able to add new ingredients that cu
 CP02 | Changing the properties of ingridients| Admin will be able to change properties of ingredients by adding instances, removing instances, or changing the price   | x
 CP03 | Statistic graphs on ingridients| Admin will be able to see which of his ingredients are bought up the most  and will be able to compare any 2 ingredients | Tomislav Bračić
 CP04 | Statistic graphs on sales| Admin will be able to see his sale history on specific days and specific times of day | Tomislav Bračić
-CP05 | User registration| Users will be able to register to the site | x
-CP06 | User and admin profile changes| Both admin and the user will be able to change their passwords and their e-mail | x
+CP05 | User login & registration| Users will be able to login & register to the site | Luka Mrkonjić
+CP06 | User profile changes| Users will be able to change their passwords and their e-mail | Luka Mrkonjić
 CP07 | Choosing ingridients| User will be able to choose ingredients for his very specific pizza | x
-CP07 | "Add to the cart"| User will be able to add more different pizzas and number of each before ordering| x
-CP08 | Time till arrival| User will see the estimated time before the pizza arrives too him | x
+CP08 | "Add to the cart"| User will be able to add more different pizzas and number of each before ordering| x
+CP09 | Time till arrival| User will see the estimated time before the pizza arrives too him | x
 
 ## Technology and equipment
 We will be using the following technology:
