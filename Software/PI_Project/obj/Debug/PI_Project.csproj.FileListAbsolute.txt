@@ -1,0 +1,11 @@
+C:\Users\Goc\source\repos\PI_Project\bin\Debug\PI_Project.exe.config
+C:\Users\Goc\source\repos\PI_Project\bin\Debug\PI_Project.exe
+C:\Users\Goc\source\repos\PI_Project\bin\Debug\PI_Project.pdb
+C:\Users\Goc\source\repos\PI_Project\obj\Debug\PI_Project.csprojAssemblyReference.cache
+C:\Users\Goc\source\repos\PI_Project\obj\Debug\PI_Project.Form1.resources
+C:\Users\Goc\source\repos\PI_Project\obj\Debug\PI_Project.Properties.Resources.resources
+C:\Users\Goc\source\repos\PI_Project\obj\Debug\PI_Project.csproj.GenerateResource.cache
+C:\Users\Goc\source\repos\PI_Project\obj\Debug\PI_Project.csproj.CoreCompileInputs.cache
+C:\Users\Goc\source\repos\PI_Project\obj\Debug\PI_Project.exe
+C:\Users\Goc\source\repos\PI_Project\obj\Debug\PI_Project.pdb
+C:\Users\Goc\source\repos\PI_Project\obj\Debug\PI_Project.UserControl1.resources
