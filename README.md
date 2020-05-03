@@ -23,13 +23,13 @@ ID | Name | Short description | Responsible team member
 CP01 | User registration| User will be able to register himself in this application. | Luka Mrkonjić
 CP02 | User login| User will be able to login in this application. There will be 3 types of user: “Admin”, “Customer” and “Worker”. Each type leads to a different homepage   | Luka Mrkonjić
 CP03 | User profile settings| Users will be able to change data about their profile | Luka Mrkonjić
-CP04 | Adding new ingredients| Admin will be able to add new ingredients that customers will be able to choose | Tomislav Bračić
+CP04 | Adding new ingredients| Admin will be able to add new ingredients that customers will be able to choose | x
 CP05 | Changing the properties of ingredients| Admin will be able to change properties of ingredients by adding instances, removing instances, or changing the price   | Clément Connan
 CP06 | Creating preset pizzas| Admin will be to create pizzas which will customer then be able to buy | x
 CP07 | Creating discount for pizzas| Admin will be to create discount for preset pizzas that last limited amount of time | x
 CP08 | Statistic graphs on ingredients| Admin will be able to see which of his ingredients are bought up the most and will be able to compare any 2 ingredients | Tomislav Bračić
 CP09 | Statistic graphs on sales| Admin will be able to see his sale history on specific days and specific times of day | Tomislav Bračić
-CP10 | Turning customer into worker and vice versa| Admin will be able to turn customer into worker, and worker into customer | x
+CP10 | Turning customer into worker and vice versa| Admin will be able to turn customer into worker, and worker into customer | Tomislav Bračić
 CP11 | Confirming/declining bills| Worker will be able to confirm/decline upcoming request for bill | Luka Mrkonjić
 CP012 | Choosing ingredients| Customer will be able to choose ingredients for his very specific pizza | Clément Connan
 CP013 | Choosing preset pizza| Customer will be able to choose from preexisting pizzas that admin made | x
