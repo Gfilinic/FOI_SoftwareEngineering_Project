@@ -20,15 +20,23 @@ Project will have the following functionalities:
 
 ID | Name | Short description | Responsible team member
 ------ | ----- | ----------- | -------------------
-CP01 | Adding new ingridients| Admin will be able to add new ingredients that customers will be able to choose | Tomislav Bračić
-CP02 | Changing the properties of ingridients| Admin will be able to change properties of ingredients by adding instances, removing instances, or changing the price   | Clément Connan
-CP03 | Statistic graphs on ingridients| Admin will be able to see which of his ingredients are bought up the most  and will be able to compare any 2 ingredients | Tomislav Bračić
-CP04 | Statistic graphs on sales| Admin will be able to see his sale history on specific days and specific times of day | Tomislav Bračić
-CP05 | User login & registration| Users will be able to login & register to the site | Luka Mrkonjić
-CP06 | User profile changes| Users will be able to change their passwords and their e-mail | Luka Mrkonjić
-CP07 | Choosing ingridients| User will be able to choose ingredients for his very specific pizza | Clément Connan
-CP08 | "Add to the cart"| User will be able to add more different pizzas and number of each before ordering| x
-CP09 | Time till arrival| User will see the estimated time before the pizza arrives too him | x
+CP01 | User registration| User will be able to register himself in this application. | Luka Mrkonjić
+CP02 | User login| User will be able to login in this application. There will be 3 types of user: “Admin”, “Customer” and “Worker”. Each type leads to a different homepage   | Luka Mrkonjić
+CP03 | User profile settings| Users will be able to change data about their profile | Luka Mrkonjić
+CP04 | Adding new ingredients| Admin will be able to add new ingredients that customers will be able to choose | Tomislav Bračić
+CP05 | Changing the properties of ingredients| Admin will be able to change properties of ingredients by adding instances, removing instances, or changing the price   | Clément Connan
+CP06 | Creating preset pizzas| Admin will be to create pizzas which will customer then be able to buy | x
+CP07 | Creating discount for pizzas| Admin will be to create discount for preset pizzas that last limited amount of time | x
+CP08 | Statistic graphs on ingredients| Admin will be able to see which of his ingredients are bought up the most and will be able to compare any 2 ingredients | Tomislav Bračić
+CP09 | Statistic graphs on sales| Admin will be able to see his sale history on specific days and specific times of day | Tomislav Bračić
+CP10 | Statistic graphs on sales| Admin will be able to turn customer into worker, and worker into customer | x
+CP11 | Confirming/declining bills| Worker will be able to confirm/decline upcoming request for bill | Luka Mrkonjić
+CP012 | Choosing ingredients| Customer will be able to choose ingredients for his very specific pizza | Clément Connan
+CP013 | Choosing preset pizza| Customer will be able to choose from preexisting pizzas that admin made | x
+CP014 | Add to the cart | Customer will be able to add more different pizzas and number of each before ordering| x
+CP015 | Time till arrival of pizza| User will see the estimated time before the pizza arrives too him and how much he must pay for it | x
+CP016 | Help button| Pressing F1 will open a help window. Each form will have different help prompt | x
+
 
 ## Technology and equipment
 We will be using the following technology:
@@ -40,5 +48,8 @@ We will be using the following technology:
 5.  Draw.io
 6.  MySQL
 7.  MySQL Server
+8.  GanttProject
+9.  Microsoft Excel
+10. Visual Paradigm Online
 
-GitHub will be our main "headquarters", the place where we will keep track of our work by uploading whenever we do something on our project. Visual Studio 2019 is programming environment where we will be coding our program in C#. In Differ we as team will comunicate and inform each other about deadlines and similar stuff. In Microsoft Word 2019 we will document most of the stuff that we do. In Draw.io we will draw tables, diagram and other stuff that pops along our way. We will make our database in MySQL and run it on the MySQL Server.
+GitHub will be our main "headquarters", the place where we will keep track of our work by uploading whenever we do something on our project. Visual Studio 2019 is programming environment where we will be coding our program in C#. In Differ we as team will comunicate and inform each other about deadlines and similar stuff. In Microsoft Word 2019 we will document most of the stuff that we do. In Draw.io we will draw tables, diagram and other stuff that pops along our way. We will make our database in MySQL and run it on the MySQL Server. GanttProject will be used for making Gantt's diagram (timetable). Microsoft excel will be used for making documents that will use a lot of tables (for example project budget). Visual Paradigm Online will be used for making different diagrams for Technical documentation.
