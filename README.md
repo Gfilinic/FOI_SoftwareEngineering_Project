@@ -35,7 +35,7 @@ CP012 | Choosing ingredients| Customer will be able to choose ingredients for hi
 CP013 | Choosing preset pizza| Customer will be able to choose from preexisting pizzas that admin made | Stjepan Janković
 CP014 | Add to the cart | Customer will be able to add more different pizzas and number of each before ordering| Goran Filinić
 CP015 | Time till arrival of pizza| User will see the estimated time before the pizza arrives too him and how much he must pay for it | Stjepan Janković
-CP016 | Help button| Pressing F1 will open a help window. Each form will have different help prompt | x
+CP016 | Help button| Pressing F1 will open a help window. Each form will have different help prompt | Goran Filinić
 
 
 ## Technology and equipment
