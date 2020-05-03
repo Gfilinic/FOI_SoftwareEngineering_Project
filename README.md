@@ -23,7 +23,7 @@ ID | Name | Short description | Responsible team member
 CP01 | User registration| User will be able to register himself in this application. | Luka Mrkonjić
 CP02 | User login| User will be able to login in this application. There will be 3 types of user: “Admin”, “Customer” and “Worker”. Each type leads to a different homepage   | Luka Mrkonjić
 CP03 | User profile settings| Users will be able to change data about their profile | Luka Mrkonjić
-CP04 | Adding new ingredients| Admin will be able to add new ingredients that customers will be able to choose | x
+CP04 | Adding new ingredients| Admin will be able to add new ingredients that customers will be able to choose | Clément Connan
 CP05 | Changing the properties of ingredients| Admin will be able to change properties of ingredients by adding instances, removing instances, or changing the price   | Clément Connan
 CP06 | Creating preset pizzas| Admin will be to create pizzas which will customer then be able to buy | x
 CP07 | Creating discount for pizzas| Admin will be to create discount for preset pizzas that last limited amount of time | x
