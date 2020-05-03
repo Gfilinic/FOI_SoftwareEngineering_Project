@@ -30,7 +30,7 @@ CP07 | Creating discount for pizzas| Admin will be to create discount for preset
 CP08 | Statistic graphs on ingredients| Admin will be able to see which of his ingredients are bought up the most and will be able to compare any 2 ingredients | Tomislav Bračić
 CP09 | Statistic graphs on sales| Admin will be able to see his sale history on specific days and specific times of day | Tomislav Bračić
 CP10 | Turning customer into worker and vice versa| Admin will be able to turn customer into worker, and worker into customer | Luka Mrkonjić
-CP11 | Confirming/declining bills| Worker will be able to confirm/decline upcoming request for bill | x
+CP11 | Confirming/declining bills| Worker will be able to confirm/decline upcoming request for bill | Tomislav Bračić
 CP012 | Choosing ingredients| Customer will be able to choose ingredients for his very specific pizza | Clément Connan
 CP013 | Choosing preset pizza| Customer will be able to choose from preexisting pizzas that admin made | x
 CP014 | Add to the cart | Customer will be able to add more different pizzas and number of each before ordering| x
