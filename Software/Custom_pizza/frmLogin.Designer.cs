@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this._picLogo = new System.Windows.Forms.PictureBox();
             this.pnlLoginMenu = new System.Windows.Forms.Panel();
-            this.lblErrorMessage = new System.Windows.Forms.Label();
             this.btnShutDown = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,7 +61,6 @@
             // 
             this.pnlLoginMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlLoginMenu.BackColor = System.Drawing.Color.IndianRed;
-            this.pnlLoginMenu.Controls.Add(this.lblErrorMessage);
             this.pnlLoginMenu.Controls.Add(this.btnShutDown);
             this.pnlLoginMenu.Controls.Add(this.btnRegister);
             this.pnlLoginMenu.Controls.Add(this.label1);
@@ -76,16 +74,6 @@
             this.pnlLoginMenu.Name = "pnlLoginMenu";
             this.pnlLoginMenu.Size = new System.Drawing.Size(413, 307);
             this.pnlLoginMenu.TabIndex = 0;
-            // 
-            // lblErrorMessage
-            // 
-            this.lblErrorMessage.AutoSize = true;
-            this.lblErrorMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblErrorMessage.Location = new System.Drawing.Point(8, 163);
-            this.lblErrorMessage.Name = "lblErrorMessage";
-            this.lblErrorMessage.Size = new System.Drawing.Size(15, 13);
-            this.lblErrorMessage.TabIndex = 9;
-            this.lblErrorMessage.Text = "E";
             // 
             // btnShutDown
             // 
@@ -208,7 +196,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnShutDown;
-        private System.Windows.Forms.Label lblErrorMessage;
     }
 }
 

@@ -12,23 +12,7 @@ namespace UserSettingsClass
     public class Register
     {
         UserRepository userRepository;
-        public MemoryStream GetDefaultImage()
-        {
-            DataBaseI.Instance.Connect();
-            byte[] image = null;
-            string SQLcommand = "SELECT image FROM [Image] WHERE id_image=1;";
-            IDataReader dataReader = DataBaseI.Instance.GetDataReader(SQLcommand);
-            while (dataReader.Read())
-            {
-                image = (byte[])dataReader["image"];
-            }
-            dataReader.Close();
-            DataBaseI.Instance.Disconnect();
-            MemoryStream msImage = new MemoryStream(image);
-            return msImage;
-        }
-
-
+        
         public string AddNewUser(string name, string surname, string username, string password, string repeatPassword, string email, string city, int zipcode, string adress, string imagePath)
         {
             string check = CheckIfEmpty(username, email, password, repeatPassword, name, surname);

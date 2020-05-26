@@ -57,12 +57,7 @@ namespace Custom_pizza
 
         private void OpenApp(User user)
         {
-            if (user.UserType == User_Type.admin)
-                Application.Run(new frmAdmin(user));
-            else if (user.UserType == User_Type.worker)
-                Application.Run(new frmWorker(user));
-            else
-                Application.Run(new frmCustomer(user));
+                Application.Run(new frmMainMenu(user));
         }
 
         private void btnRegister_Click(object sender, EventArgs e)

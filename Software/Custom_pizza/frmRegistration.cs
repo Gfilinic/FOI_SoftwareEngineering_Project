@@ -17,6 +17,7 @@ namespace Custom_pizza
     {
         private Thread threadLogin;
         private Register register;
+        private UserRepository userRepository;
         private string imagePath=null;
 
         public frmRegistration()
@@ -33,8 +34,8 @@ namespace Custom_pizza
 
         private void frmRegistration_Load(object sender, EventArgs e)
         {
-            register = new Register();
-            picUserImage.Image = Image.FromStream(register.GetDefaultImage());
+            userRepository = new UserRepository();
+            picUserImage.Image = Image.FromStream(userRepository.GetImageMemoryByID(1));
             picUserImage.SizeMode = PictureBoxSizeMode.StretchImage;
             txtUsername.MaxLength = 25;
             txtEmail.MaxLength = 25;
@@ -61,7 +62,7 @@ namespace Custom_pizza
 
         private void btnResetImage_Click(object sender, EventArgs e)
         {
-            picUserImage.Image = Image.FromStream(register.GetDefaultImage());
+            picUserImage.Image = Image.FromStream(userRepository.GetImageMemoryByID(1));
             imagePath = null;
         }
 

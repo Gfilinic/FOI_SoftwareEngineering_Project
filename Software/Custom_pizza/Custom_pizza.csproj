@@ -64,17 +64,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAdmin.cs">
+    <Compile Include="frmAddRemoveWorkers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAdmin.Designer.cs">
-      <DependentUpon>frmAdmin.cs</DependentUpon>
+    <Compile Include="frmAddRemoveWorkers.Designer.cs">
+      <DependentUpon>frmAddRemoveWorkers.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCustomer.cs">
+    <Compile Include="frmAdminMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCustomer.Designer.cs">
-      <DependentUpon>frmCustomer.cs</DependentUpon>
+    <Compile Include="frmAdminMenu.Designer.cs">
+      <DependentUpon>frmAdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerMenu.Designer.cs">
+      <DependentUpon>frmCustomerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainMenu.Designer.cs">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -88,19 +100,25 @@
     <Compile Include="frmRegistration.Designer.cs">
       <DependentUpon>frmRegistration.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmWorker.cs">
+    <Compile Include="frmWorkerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmWorker.Designer.cs">
-      <DependentUpon>frmWorker.cs</DependentUpon>
+    <Compile Include="frmWorkerMenu.Designer.cs">
+      <DependentUpon>frmWorkerMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAdmin.resx">
-      <DependentUpon>frmAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="frmAddRemoveWorkers.resx">
+      <DependentUpon>frmAddRemoveWorkers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCustomer.resx">
-      <DependentUpon>frmCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="frmCustomerMenu.resx">
+      <DependentUpon>frmCustomerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminMenu.resx">
+      <DependentUpon>frmAdminMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -108,8 +126,8 @@
     <EmbeddedResource Include="frmRegistration.resx">
       <DependentUpon>frmRegistration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmWorker.resx">
-      <DependentUpon>frmWorker.cs</DependentUpon>
+    <EmbeddedResource Include="frmWorkerMenu.resx">
+      <DependentUpon>frmWorkerMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -138,6 +156,10 @@
     <Folder Include="FormImages\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataBase\DataBase.csproj">
+      <Project>{297ef97b-df30-4a1a-89bc-0e9be1c24879}</Project>
+      <Name>DataBase</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UserSettingsClass\UserSettingsClass.csproj">
       <Project>{fdd4bee9-9529-4cc9-8141-a39ee208227f}</Project>
       <Name>UserSettingsClass</Name>

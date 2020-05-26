@@ -152,6 +152,22 @@ namespace UserSettingsClass
             return imageItem;
         }
 
+        public MemoryStream GetImageMemoryByID(int ID)
+        {
+            DataBaseI.Instance.Connect();
+            byte[] image = null;
+            string SQLcommand = $"SELECT image FROM [Image] WHERE id_image={ID};";
+            IDataReader dataReader = DataBaseI.Instance.GetDataReader(SQLcommand);
+            while (dataReader.Read())
+            {
+                image = (byte[])dataReader["image"];
+            }
+            dataReader.Close();
+            DataBaseI.Instance.Disconnect();
+            MemoryStream msImage = new MemoryStream(image);
+            return msImage;
+        }
+
 
     }
 }
