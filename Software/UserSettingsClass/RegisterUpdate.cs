@@ -9,7 +9,7 @@ using DataBase;
 
 namespace UserSettingsClass
 {
-    public class Register
+    public class RegisterUpdate
     {
         UserRepository userRepository;
         
@@ -34,6 +34,29 @@ namespace UserSettingsClass
             userRepository.AddNewUserToDatabase(name, surname, username, password, email, city, zipcode, adress, imagePath);
             return "Success! You have successfully made an account for Custom Pizza!";
         }
+
+        public string UpdateUser(User currentUser, string name, string surname, string username, string password, string repeatPassword, string email, string city, int zipcode, string adress, string imagePath)
+        {
+            string check = CheckIfEmpty(username, email, password, repeatPassword, name, surname);
+            if (check != "")
+                return check;
+            check = CheckIfEmailFormCorrect(email);
+            if (check != "")
+                return check;
+            check = CheckIfPasswordMatch(password, repeatPassword);
+            if (check != "")
+                return check;
+            userRepository = new UserRepository();
+            int user_id = userRepository.CheckIfUsernameExists(username);
+            if (user_id != 0 && user_id!=currentUser.Id)
+                return "This username is already in use. Please use another one!";
+            user_id = userRepository.CheckIfEmailExists(email);
+            if (user_id != 0 && user_id != currentUser.Id)
+                return "This email is already in use. Please use another one!";
+            userRepository.UpdateUserSettings(currentUser, name, surname, username, password, email, city, zipcode, adress, imagePath);
+            return "Success! You have successfully made change/s on your account for Custom Pizza! Changes will take affect once you get out of option menu!";
+        }
+
 
         private string CheckIfEmpty(string username, string email, string password, string repeatPassword, string name, string surname)
         {

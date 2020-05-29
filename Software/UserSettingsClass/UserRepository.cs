@@ -1,12 +1,7 @@
-﻿using System;
+﻿using DataBase;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-using DataBase;
 
 namespace UserSettingsClass
 {
@@ -65,6 +60,30 @@ namespace UserSettingsClass
             DataBaseI.Instance.Disconnect();
         }
 
+        public void UpdateUserSettings(User currentUser, string name, string surname, string username, string password, string email, string city, int zipcode, string adress, string imagePath)
+        {
+            int idImage = 0;
+            string SQLcommand = "";
+
+            if (imagePath == "old")
+            {
+                SQLcommand = $"UPDATE [User] SET name='{name}', surname='{surname}', username='{username}', password='{password}', email='{email}', city='{city}', zipcode={zipcode}, address='{adress}'  WHERE id_user={currentUser.Id};";
+            }
+            else if (currentUser.UserImage.Id_image == 1)
+            {
+                idImage = AddUserImageToDatabase(imagePath);
+                SQLcommand = $"UPDATE [User] SET name='{name}', surname='{surname}', username='{username}', password='{password}', email='{email}', city='{city}', zipcode={zipcode}, address='{adress}', id_image={idImage}  WHERE id_user={currentUser.Id};";
+            }
+            else
+            {
+                UpdateImage(imagePath, currentUser.UserImage.Id_image);
+                SQLcommand = $"UPDATE [User] SET name='{name}', surname='{surname}', username='{username}', password='{password}', email='{email}', city='{city}', zipcode={zipcode}, address='{adress}'  WHERE id_user={currentUser.Id};";
+            }
+            DataBaseI.Instance.Connect();
+            DataBaseI.Instance.ExecuteCommand(SQLcommand);
+            DataBaseI.Instance.Disconnect();
+        }
+
         private int AddUserImageToDatabase(string imagePath)
         {
             if (imagePath == null)
@@ -86,7 +105,6 @@ namespace UserSettingsClass
                 return idImage;
             }
         }
-
 
         public bool CheckPassword(int user_id, string password)
         {
@@ -168,6 +186,32 @@ namespace UserSettingsClass
             return msImage;
         }
 
+        public void UpdateDefaultImages(string pathUser, string pathPizza, string pathIngredient, string pathDiscount)
+        {
+            if (pathUser != "old")
+                UpdateImage(pathUser, 1);
+
+            if (pathPizza != "old")
+                UpdateImage(pathPizza, 2);
+
+            if (pathIngredient != "old")
+                UpdateImage(pathIngredient, 3);
+
+            if (pathDiscount != "old")
+                UpdateImage(pathDiscount, 4);
+        }
+
+        private void UpdateImage(string imagePath, int idImage)
+        {
+            byte[] image = null;
+            FileStream fs = new FileStream(imagePath, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            image = br.ReadBytes((int)fs.Length);
+            string SQLcommand = $"UPDATE [Image] SET image=(@image) WHERE id_image={idImage};";
+            DataBaseI.Instance.Connect();
+            DataBaseI.Instance.ExecuteCommandImageParametar(SQLcommand, image);
+            DataBaseI.Instance.Disconnect();
+        }
 
     }
 }

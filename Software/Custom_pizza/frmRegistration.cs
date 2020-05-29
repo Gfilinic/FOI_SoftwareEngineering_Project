@@ -16,7 +16,7 @@ namespace Custom_pizza
     public partial class frmRegistration : Form
     {
         private Thread threadLogin;
-        private Register register;
+        private RegisterUpdate register;
         private UserRepository userRepository;
         private string imagePath=null;
 
@@ -105,7 +105,7 @@ namespace Custom_pizza
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            register = new Register();
+            register = new RegisterUpdate();
             string username = txtUsername.Text;
             string email = txtEmail.Text;
             string password = txtPassword.Text;

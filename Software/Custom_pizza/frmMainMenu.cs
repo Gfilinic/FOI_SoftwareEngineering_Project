@@ -9,22 +9,32 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UserSettingsClass;
 using DataBase;
+using System.Threading;
 
 namespace Custom_pizza
 {
     public partial class frmMainMenu : Form
     {
+        Thread threadLogin;
         private bool logOutExpanded;
         private User currentUser;
         private UserRepository userRepository;
+
         public frmMainMenu(User user)
         {
             InitializeComponent();
             logOutExpanded = false;
             currentUser = user;
+            try
+            {
+                if (threadLogin.ThreadState == ThreadState.Running)
+                    threadLogin.Abort();
+            }
+            catch (NullReferenceException)
+            {
+            }
         }
-
-        private void frmMainMenu_Load(object sender, EventArgs e)
+        private void Refresh()
         {
             userRepository = new UserRepository();
             DataBase.Image userImage = currentUser.UserImage;
@@ -32,6 +42,12 @@ namespace Custom_pizza
             picUser.Image = System.Drawing.Image.FromStream(userRepository.GetImageMemoryByID(userImage.Id_image));
             picUser.SizeMode = PictureBoxSizeMode.StretchImage;
             OpenMenu();
+        }
+
+
+        private void frmMainMenu_Load(object sender, EventArgs e)
+        {
+            Refresh();
         }
 
         private void OpenMenu()
@@ -90,13 +106,24 @@ namespace Custom_pizza
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            //here will come logOut later on
+            Close();
+            threadLogin = new Thread(OpenLogin);
+            threadLogin.SetApartmentState(ApartmentState.STA);
+            threadLogin.Start();
         }
 
-        private void SetCursor(int cordinate)
+        private void OpenLogin()
         {
+            Application.Run(new frmLogin());
         }
 
-       
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            frmOptions frmOptions = new frmOptions(currentUser);
+            frmOptions.ShowDialog();
+            userRepository = new UserRepository();
+            currentUser = userRepository.GetUser(currentUser.Id);
+            Refresh();
+        }
     }
 }
