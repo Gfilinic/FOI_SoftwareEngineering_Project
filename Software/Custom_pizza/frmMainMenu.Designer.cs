@@ -270,7 +270,7 @@
             // 
             this.pnlWorkBoard.Location = new System.Drawing.Point(208, 184);
             this.pnlWorkBoard.Name = "pnlWorkBoard";
-            this.pnlWorkBoard.Size = new System.Drawing.Size(1383, 665);
+            this.pnlWorkBoard.Size = new System.Drawing.Size(1380, 665);
             this.pnlWorkBoard.TabIndex = 14;
             // 
             // frmMainMenu

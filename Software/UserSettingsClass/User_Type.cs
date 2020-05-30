@@ -9,7 +9,7 @@ namespace UserSettingsClass
 	public enum User_Type
 	{
 		admin,
-		customer,
-		worker
+		worker,
+		customer
 	}
 }

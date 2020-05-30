@@ -11,6 +11,47 @@ namespace UserSettingsClass
         {
 
         }
+
+        public List<User> GetAllUsers()
+        {
+            List<User> allUsers = new List<User>();
+            string SQLcommand = $"SELECT * FROM [User] WHERE id_user!=1";
+            DataBaseI.Instance.Connect();
+            IDataReader dataReader = DataBaseI.Instance.GetDataReader(SQLcommand);
+            while (dataReader.Read())
+            {
+                int id_user = (int)dataReader["id_user"];
+                int type = (int)dataReader["id_user_type"];
+                string name = dataReader["name"].ToString();
+                string surname = dataReader["surname"].ToString();
+                string username = dataReader["username"].ToString();
+                string email = dataReader["email"].ToString();
+                string city = dataReader["city"].ToString();
+                int zipcode = (int)dataReader["zipcode"];
+                string address = dataReader["address"].ToString();
+
+                User_Type user_Type = User_Type.customer;
+                if (type == 1)
+                    user_Type = User_Type.admin;
+                if (type == 2)
+                    user_Type = User_Type.worker;
+
+                User user = new User(id_user, user_Type, name, surname, username, email, city, zipcode, address);
+                allUsers.Add(user);
+            }
+            dataReader.Close();
+            DataBaseI.Instance.Disconnect();
+            return allUsers;
+        }
+
+        public void UpdateUserType(int idUser, User_Type user_Type)
+        {
+            string SQLcommand = $"UPDATE [User] SET id_user_type={(int)user_Type+1} WHERE id_user={idUser};";
+            DataBaseI.Instance.Connect();
+            DataBaseI.Instance.ExecuteCommand(SQLcommand);
+            DataBaseI.Instance.Disconnect();
+        }
+
         public int CheckIfUsernameExists(string username)
         {
             int id = 0;

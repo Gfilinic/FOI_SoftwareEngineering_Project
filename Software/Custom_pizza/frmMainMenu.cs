@@ -82,7 +82,6 @@ namespace Custom_pizza
             pnlWorkBoard.Tag = newForm;
             newForm.BringToFront();
             newForm.Show();
-
         }
 
         private void btnShutDown_Click(object sender, EventArgs e)
