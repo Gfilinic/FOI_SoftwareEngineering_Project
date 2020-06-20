@@ -36,6 +36,9 @@
             // 
             // btnChangeUserSettings
             // 
+            this.btnChangeUserSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnChangeUserSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnChangeUserSettings.Location = new System.Drawing.Point(95, 45);
             this.btnChangeUserSettings.Name = "btnChangeUserSettings";
@@ -47,6 +50,9 @@
             // 
             // btnChangeDefault
             // 
+            this.btnChangeDefault.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnChangeDefault.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnChangeDefault.Location = new System.Drawing.Point(95, 200);
             this.btnChangeDefault.Name = "btnChangeDefault";
@@ -58,14 +64,15 @@
             // 
             // btnExit
             // 
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(159, 373);
+            this.btnExit.Location = new System.Drawing.Point(0, 361);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(29, 29);
+            this.btnExit.Size = new System.Drawing.Size(349, 103);
             this.btnExit.TabIndex = 5;
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = true;

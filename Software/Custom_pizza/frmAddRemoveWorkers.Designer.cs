@@ -39,7 +39,8 @@
             // 
             // btnChangeToWorker
             // 
-            this.btnChangeToWorker.Location = new System.Drawing.Point(1183, 583);
+            this.btnChangeToWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChangeToWorker.Location = new System.Drawing.Point(1116, 26);
             this.btnChangeToWorker.Name = "btnChangeToWorker";
             this.btnChangeToWorker.Size = new System.Drawing.Size(75, 40);
             this.btnChangeToWorker.TabIndex = 1;
@@ -49,7 +50,8 @@
             // 
             // btnChangeToCustomer
             // 
-            this.btnChangeToCustomer.Location = new System.Drawing.Point(1277, 583);
+            this.btnChangeToCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChangeToCustomer.Location = new System.Drawing.Point(1214, 26);
             this.btnChangeToCustomer.Name = "btnChangeToCustomer";
             this.btnChangeToCustomer.Size = new System.Drawing.Size(75, 40);
             this.btnChangeToCustomer.TabIndex = 2;
@@ -59,21 +61,22 @@
             // 
             // dgvUsers
             // 
-            this.dgvUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsers.Location = new System.Drawing.Point(12, 12);
+            this.dgvUsers.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvUsers.Location = new System.Drawing.Point(0, 77);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.ReadOnly = true;
             this.dgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsers.Size = new System.Drawing.Size(1340, 551);
+            this.dgvUsers.Size = new System.Drawing.Size(1301, 563);
             this.dgvUsers.TabIndex = 0;
             this.dgvUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellClick);
             this.dgvUsers.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvUsers_DataBindingComplete);
             // 
             // _lblSearch
             // 
+            this._lblSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._lblSearch.AutoSize = true;
-            this._lblSearch.Location = new System.Drawing.Point(574, 594);
+            this._lblSearch.Location = new System.Drawing.Point(609, 53);
             this._lblSearch.Name = "_lblSearch";
             this._lblSearch.Size = new System.Drawing.Size(167, 13);
             this._lblSearch.TabIndex = 3;
@@ -81,7 +84,8 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(747, 591);
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.Location = new System.Drawing.Point(797, 46);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(162, 20);
             this.txtSearch.TabIndex = 4;
@@ -89,7 +93,8 @@
             // 
             // btnRestart
             // 
-            this.btnRestart.Location = new System.Drawing.Point(942, 589);
+            this.btnRestart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRestart.Location = new System.Drawing.Point(993, 43);
             this.btnRestart.Name = "btnRestart";
             this.btnRestart.Size = new System.Drawing.Size(75, 23);
             this.btnRestart.TabIndex = 5;
@@ -101,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1364, 626);
+            this.ClientSize = new System.Drawing.Size(1301, 640);
             this.ControlBox = false;
             this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.txtSearch);

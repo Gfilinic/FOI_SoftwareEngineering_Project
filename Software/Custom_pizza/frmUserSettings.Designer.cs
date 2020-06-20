@@ -75,6 +75,7 @@
             // 
             // pnlLoginMenu
             // 
+            this.pnlLoginMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pnlLoginMenu.BackColor = System.Drawing.Color.IndianRed;
             this.pnlLoginMenu.Controls.Add(this.txtRepeatPassword);
             this.pnlLoginMenu.Controls.Add(this.lblRepeatPassword);
@@ -100,9 +101,9 @@
             this.pnlLoginMenu.Controls.Add(this.lblUsername);
             this.pnlLoginMenu.Controls.Add(this._lblUserSettings);
             this.pnlLoginMenu.Controls.Add(this.txtUsername);
-            this.pnlLoginMenu.Location = new System.Drawing.Point(13, 111);
+            this.pnlLoginMenu.Location = new System.Drawing.Point(0, 111);
             this.pnlLoginMenu.Name = "pnlLoginMenu";
-            this.pnlLoginMenu.Size = new System.Drawing.Size(624, 458);
+            this.pnlLoginMenu.Size = new System.Drawing.Size(649, 458);
             this.pnlLoginMenu.TabIndex = 7;
             // 
             // txtRepeatPassword

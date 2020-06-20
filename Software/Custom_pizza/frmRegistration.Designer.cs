@@ -76,6 +76,7 @@
             // 
             // pnlLoginMenu
             // 
+            this.pnlLoginMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pnlLoginMenu.BackColor = System.Drawing.Color.IndianRed;
             this.pnlLoginMenu.Controls.Add(this.btnResetImage);
             this.pnlLoginMenu.Controls.Add(this.txtRepeatPassword);
@@ -102,14 +103,14 @@
             this.pnlLoginMenu.Controls.Add(this.lblUsername);
             this.pnlLoginMenu.Controls.Add(this._lblWelcome);
             this.pnlLoginMenu.Controls.Add(this.txtUsername);
-            this.pnlLoginMenu.Location = new System.Drawing.Point(12, 121);
+            this.pnlLoginMenu.Location = new System.Drawing.Point(0, 121);
             this.pnlLoginMenu.Name = "pnlLoginMenu";
-            this.pnlLoginMenu.Size = new System.Drawing.Size(624, 458);
+            this.pnlLoginMenu.Size = new System.Drawing.Size(649, 448);
             this.pnlLoginMenu.TabIndex = 0;
             // 
             // btnResetImage
             // 
-            this.btnResetImage.Location = new System.Drawing.Point(384, 308);
+            this.btnResetImage.Location = new System.Drawing.Point(384, 339);
             this.btnResetImage.Name = "btnResetImage";
             this.btnResetImage.Size = new System.Drawing.Size(100, 30);
             this.btnResetImage.TabIndex = 9;
@@ -136,7 +137,7 @@
             // 
             // btnGoBack
             // 
-            this.btnGoBack.Location = new System.Drawing.Point(384, 382);
+            this.btnGoBack.Location = new System.Drawing.Point(384, 396);
             this.btnGoBack.Name = "btnGoBack";
             this.btnGoBack.Size = new System.Drawing.Size(100, 40);
             this.btnGoBack.TabIndex = 11;
@@ -232,7 +233,7 @@
             // 
             // btnAddImage
             // 
-            this.btnAddImage.Location = new System.Drawing.Point(509, 308);
+            this.btnAddImage.Location = new System.Drawing.Point(509, 339);
             this.btnAddImage.Name = "btnAddImage";
             this.btnAddImage.Size = new System.Drawing.Size(100, 30);
             this.btnAddImage.TabIndex = 10;
@@ -253,7 +254,7 @@
             // picUserImage
             // 
             this.picUserImage.BackColor = System.Drawing.Color.Gray;
-            this.picUserImage.Location = new System.Drawing.Point(384, 78);
+            this.picUserImage.Location = new System.Drawing.Point(396, 82);
             this.picUserImage.Name = "picUserImage";
             this.picUserImage.Size = new System.Drawing.Size(225, 225);
             this.picUserImage.TabIndex = 12;
@@ -278,7 +279,7 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(509, 382);
+            this.btnRegister.Location = new System.Drawing.Point(509, 396);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(100, 40);
             this.btnRegister.TabIndex = 12;
@@ -335,10 +336,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Firebrick;
-            this.ClientSize = new System.Drawing.Size(649, 594);
+            this.ClientSize = new System.Drawing.Size(649, 610);
             this.ControlBox = false;
-            this.Controls.Add(this.pnlLoginMenu);
             this.Controls.Add(this._picLogo);
+            this.Controls.Add(this.pnlLoginMenu);
             this.Name = "frmRegistration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmRegistration_Load);

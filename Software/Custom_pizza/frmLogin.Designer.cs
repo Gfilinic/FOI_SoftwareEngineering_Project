@@ -46,8 +46,9 @@
             // 
             // _picLogo
             // 
+            this._picLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this._picLogo.BackColor = System.Drawing.Color.Firebrick;
-            this._picLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this._picLogo.ErrorImage = ((System.Drawing.Image)(resources.GetObject("_picLogo.ErrorImage")));
             this._picLogo.Image = ((System.Drawing.Image)(resources.GetObject("_picLogo.Image")));
             this._picLogo.Location = new System.Drawing.Point(0, 0);
@@ -59,7 +60,7 @@
             // 
             // pnlLoginMenu
             // 
-            this.pnlLoginMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlLoginMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pnlLoginMenu.BackColor = System.Drawing.Color.IndianRed;
             this.pnlLoginMenu.Controls.Add(this.btnShutDown);
             this.pnlLoginMenu.Controls.Add(this.btnRegister);
@@ -70,9 +71,9 @@
             this.pnlLoginMenu.Controls.Add(this.btnLogin);
             this.pnlLoginMenu.Controls.Add(this._lblWelcome);
             this.pnlLoginMenu.Controls.Add(this.txtUserNameEmail);
-            this.pnlLoginMenu.Location = new System.Drawing.Point(12, 131);
+            this.pnlLoginMenu.Location = new System.Drawing.Point(0, 125);
             this.pnlLoginMenu.Name = "pnlLoginMenu";
-            this.pnlLoginMenu.Size = new System.Drawing.Size(413, 307);
+            this.pnlLoginMenu.Size = new System.Drawing.Size(437, 307);
             this.pnlLoginMenu.TabIndex = 0;
             // 
             // btnShutDown
@@ -82,7 +83,7 @@
             this.btnShutDown.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShutDown.ForeColor = System.Drawing.Color.White;
             this.btnShutDown.Image = ((System.Drawing.Image)(resources.GetObject("btnShutDown.Image")));
-            this.btnShutDown.Location = new System.Drawing.Point(183, 261);
+            this.btnShutDown.Location = new System.Drawing.Point(195, 261);
             this.btnShutDown.Name = "btnShutDown";
             this.btnShutDown.Size = new System.Drawing.Size(29, 29);
             this.btnShutDown.TabIndex = 4;
@@ -92,7 +93,7 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(323, 206);
+            this.btnRegister.Location = new System.Drawing.Point(335, 206);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(75, 23);
             this.btnRegister.TabIndex = 3;
@@ -103,7 +104,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 211);
+            this.label1.Location = new System.Drawing.Point(20, 211);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(279, 13);
             this.label1.TabIndex = 6;
@@ -138,7 +139,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(323, 116);
+            this.btnLogin.Location = new System.Drawing.Point(335, 116);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 2;
