@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using UserSettingsClass;
 using DataBase;
 using System.Threading;
+using BillSettingsClass;
 
 namespace Custom_pizza
 {
@@ -18,13 +19,19 @@ namespace Custom_pizza
         Thread threadLogin;
         private bool logOutExpanded;
         private User currentUser;
+        private int idBill;
         private UserRepository userRepository;
+        private BillRepository billRepository;
+
 
         public frmMainMenu(User user)
         {
             InitializeComponent();
+            billRepository = new BillRepository();
+            userRepository = new UserRepository();
             logOutExpanded = false;
             currentUser = user;
+            idBill = billRepository.AddNewBill(currentUser);
             try
             {
                 if (threadLogin.ThreadState == ThreadState.Running)
@@ -58,7 +65,7 @@ namespace Custom_pizza
             if (currentUser.UserType == User_Type.worker)
                 menu = new frmWorkerMenu();
             if (currentUser.UserType == User_Type.customer)
-                menu = new frmCustomerMenu();
+                menu = new frmCustomerMenu(currentUser,idBill);
             menu.TopLevel = false;
             menu.FormBorderStyle = FormBorderStyle.None;
             menu.Dock = DockStyle.Fill;

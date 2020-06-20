@@ -64,6 +64,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="fmrCustomPizza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrCustomPizza.designer.cs">
+      <DependentUpon>fmrCustomPizza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddNewIngredient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddNewIngredient.designer.cs">
+      <DependentUpon>frmAddNewIngredient.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddRemoveWorkers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +112,18 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMenuIngredients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuIngredients.designer.cs">
+      <DependentUpon>frmMenuIngredients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModIngredient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModIngredient.designer.cs">
+      <DependentUpon>frmModIngredient.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmOptions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +150,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fmrCustomPizza.resx">
+      <DependentUpon>fmrCustomPizza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddNewIngredient.resx">
+      <DependentUpon>frmAddNewIngredient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddRemoveWorkers.resx">
       <DependentUpon>frmAddRemoveWorkers.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +173,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuIngredients.resx">
+      <DependentUpon>frmMenuIngredients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModIngredient.resx">
+      <DependentUpon>frmModIngredient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmOptions.resx">
       <DependentUpon>frmOptions.cs</DependentUpon>
@@ -183,6 +219,14 @@
     <Folder Include="FormImages\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Pizza\project\BillSettingsClass\BillSettingsClass.csproj">
+      <Project>{41719fff-425d-4972-ab18-a24af38a79b6}</Project>
+      <Name>BillSettingsClass</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Pizza\project\IngredientSettingsClass\IngredientSettingsClass.csproj">
+      <Project>{4f786cc7-f95a-4d7f-b228-070ed7eab3db}</Project>
+      <Name>IngredientSettingsClass</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataBase\DataBase.csproj">
       <Project>{297ef97b-df30-4a1a-89bc-0e9be1c24879}</Project>
       <Name>DataBase</Name>
@@ -203,6 +247,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
