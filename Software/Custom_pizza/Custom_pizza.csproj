@@ -220,7 +220,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BillSettingsClass\BillSettingsClass.csproj">
-      <Project>{8d9d9493-93e0-45e0-a185-281dbec39eec}</Project>
+      <Project>{99f7e3e8-4f08-45ec-82f4-2bef0e9bada1}</Project>
       <Name>BillSettingsClass</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataBase\DataBase.csproj">
@@ -228,7 +228,7 @@
       <Name>DataBase</Name>
     </ProjectReference>
     <ProjectReference Include="..\IngredientSettingsClass\IngredientSettingsClass.csproj">
-      <Project>{4f786cc7-f95a-4d7f-b228-070ed7eab3db}</Project>
+      <Project>{cf3ea461-abf8-464a-879f-5026ff464114}</Project>
       <Name>IngredientSettingsClass</Name>
     </ProjectReference>
     <ProjectReference Include="..\UserSettingsClass\UserSettingsClass.csproj">
