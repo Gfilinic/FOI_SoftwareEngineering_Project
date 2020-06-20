@@ -57,8 +57,9 @@
             this._pnlBackgroundUp.BackColor = System.Drawing.Color.Firebrick;
             this._pnlBackgroundUp.Dock = System.Windows.Forms.DockStyle.Top;
             this._pnlBackgroundUp.Location = new System.Drawing.Point(0, 0);
+            this._pnlBackgroundUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this._pnlBackgroundUp.Name = "_pnlBackgroundUp";
-            this._pnlBackgroundUp.Size = new System.Drawing.Size(1591, 50);
+            this._pnlBackgroundUp.Size = new System.Drawing.Size(2121, 62);
             this._pnlBackgroundUp.TabIndex = 0;
             // 
             // _pnlBackGroundLeft
@@ -68,19 +69,20 @@
             this._pnlBackGroundLeft.Controls.Add(this.lblWelcome);
             this._pnlBackGroundLeft.Controls.Add(this.picUser);
             this._pnlBackGroundLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this._pnlBackGroundLeft.Location = new System.Drawing.Point(0, 50);
+            this._pnlBackGroundLeft.Location = new System.Drawing.Point(0, 62);
+            this._pnlBackGroundLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this._pnlBackGroundLeft.Name = "_pnlBackGroundLeft";
-            this._pnlBackGroundLeft.Size = new System.Drawing.Size(202, 799);
+            this._pnlBackGroundLeft.Size = new System.Drawing.Size(269, 982);
             this._pnlBackGroundLeft.TabIndex = 2;
             // 
             // pnlOptionsMenu
             // 
             this.pnlOptionsMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlOptionsMenu.Location = new System.Drawing.Point(0, 203);
-            this.pnlOptionsMenu.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
+            this.pnlOptionsMenu.Location = new System.Drawing.Point(0, 247);
+            this.pnlOptionsMenu.Margin = new System.Windows.Forms.Padding(4, 37, 4, 4);
             this.pnlOptionsMenu.Name = "pnlOptionsMenu";
-            this.pnlOptionsMenu.Padding = new System.Windows.Forms.Padding(0, 5, 0, 15);
-            this.pnlOptionsMenu.Size = new System.Drawing.Size(202, 596);
+            this.pnlOptionsMenu.Padding = new System.Windows.Forms.Padding(0, 6, 0, 18);
+            this.pnlOptionsMenu.Size = new System.Drawing.Size(269, 735);
             this.pnlOptionsMenu.TabIndex = 14;
             // 
             // lblWelcome
@@ -89,10 +91,11 @@
             this.lblWelcome.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblWelcome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcome.ForeColor = System.Drawing.Color.White;
-            this.lblWelcome.Location = new System.Drawing.Point(0, 173);
+            this.lblWelcome.Location = new System.Drawing.Point(0, 213);
+            this.lblWelcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Padding = new System.Windows.Forms.Padding(10, 5, 0, 5);
-            this.lblWelcome.Size = new System.Drawing.Size(90, 30);
+            this.lblWelcome.Padding = new System.Windows.Forms.Padding(13, 6, 0, 6);
+            this.lblWelcome.Size = new System.Drawing.Size(108, 34);
             this.lblWelcome.TabIndex = 13;
             this.lblWelcome.Text = "Welcome";
             // 
@@ -100,9 +103,10 @@
             // 
             this.picUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.picUser.Location = new System.Drawing.Point(0, 0);
+            this.picUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picUser.Name = "picUser";
-            this.picUser.Padding = new System.Windows.Forms.Padding(10);
-            this.picUser.Size = new System.Drawing.Size(202, 173);
+            this.picUser.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.picUser.Size = new System.Drawing.Size(269, 213);
             this.picUser.TabIndex = 12;
             this.picUser.TabStop = false;
             // 
@@ -111,9 +115,10 @@
             this._picLogo.BackColor = System.Drawing.Color.Firebrick;
             this._picLogo.ErrorImage = ((System.Drawing.Image)(resources.GetObject("_picLogo.ErrorImage")));
             this._picLogo.Image = ((System.Drawing.Image)(resources.GetObject("_picLogo.Image")));
-            this._picLogo.Location = new System.Drawing.Point(337, 3);
+            this._picLogo.Location = new System.Drawing.Point(449, 4);
+            this._picLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this._picLogo.Name = "_picLogo";
-            this._picLogo.Size = new System.Drawing.Size(110, 175);
+            this._picLogo.Size = new System.Drawing.Size(147, 215);
             this._picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this._picLogo.TabIndex = 3;
             this._picLogo.TabStop = false;
@@ -125,9 +130,10 @@
             this.btnHelp.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHelp.ForeColor = System.Drawing.Color.Gray;
             this.btnHelp.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.Image")));
-            this.btnHelp.Location = new System.Drawing.Point(3, 1);
+            this.btnHelp.Location = new System.Drawing.Point(4, 1);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(29, 29);
+            this.btnHelp.Size = new System.Drawing.Size(39, 36);
             this.btnHelp.TabIndex = 12;
             this.btnHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHelp.UseVisualStyleBackColor = true;
@@ -139,9 +145,10 @@
             this.btnFacebook.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFacebook.ForeColor = System.Drawing.Color.White;
             this.btnFacebook.Image = ((System.Drawing.Image)(resources.GetObject("btnFacebook.Image")));
-            this.btnFacebook.Location = new System.Drawing.Point(453, 50);
+            this.btnFacebook.Location = new System.Drawing.Point(604, 62);
+            this.btnFacebook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFacebook.Name = "btnFacebook";
-            this.btnFacebook.Size = new System.Drawing.Size(28, 30);
+            this.btnFacebook.Size = new System.Drawing.Size(37, 37);
             this.btnFacebook.TabIndex = 5;
             this.btnFacebook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFacebook.UseVisualStyleBackColor = true;
@@ -153,9 +160,10 @@
             this.btnTwitter.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTwitter.ForeColor = System.Drawing.Color.White;
             this.btnTwitter.Image = ((System.Drawing.Image)(resources.GetObject("btnTwitter.Image")));
-            this.btnTwitter.Location = new System.Drawing.Point(487, 50);
+            this.btnTwitter.Location = new System.Drawing.Point(649, 62);
+            this.btnTwitter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTwitter.Name = "btnTwitter";
-            this.btnTwitter.Size = new System.Drawing.Size(28, 30);
+            this.btnTwitter.Size = new System.Drawing.Size(37, 37);
             this.btnTwitter.TabIndex = 6;
             this.btnTwitter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTwitter.UseVisualStyleBackColor = true;
@@ -167,9 +175,10 @@
             this.btnInstagram.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInstagram.ForeColor = System.Drawing.Color.White;
             this.btnInstagram.Image = ((System.Drawing.Image)(resources.GetObject("btnInstagram.Image")));
-            this.btnInstagram.Location = new System.Drawing.Point(521, 50);
+            this.btnInstagram.Location = new System.Drawing.Point(695, 62);
+            this.btnInstagram.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnInstagram.Name = "btnInstagram";
-            this.btnInstagram.Size = new System.Drawing.Size(28, 30);
+            this.btnInstagram.Size = new System.Drawing.Size(37, 37);
             this.btnInstagram.TabIndex = 7;
             this.btnInstagram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInstagram.UseVisualStyleBackColor = true;
@@ -181,9 +190,10 @@
             this.btnNotification.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotification.ForeColor = System.Drawing.Color.White;
             this.btnNotification.Image = ((System.Drawing.Image)(resources.GetObject("btnNotification.Image")));
-            this.btnNotification.Location = new System.Drawing.Point(38, 1);
+            this.btnNotification.Location = new System.Drawing.Point(51, 1);
+            this.btnNotification.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNotification.Name = "btnNotification";
-            this.btnNotification.Size = new System.Drawing.Size(29, 29);
+            this.btnNotification.Size = new System.Drawing.Size(39, 36);
             this.btnNotification.TabIndex = 8;
             this.btnNotification.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNotification.UseVisualStyleBackColor = true;
@@ -195,9 +205,10 @@
             this.btnSettings.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.White;
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.Location = new System.Drawing.Point(73, 1);
+            this.btnSettings.Location = new System.Drawing.Point(97, 1);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(29, 29);
+            this.btnSettings.Size = new System.Drawing.Size(39, 36);
             this.btnSettings.TabIndex = 9;
             this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSettings.UseVisualStyleBackColor = true;
@@ -211,10 +222,10 @@
             this.pnlShutDown.Controls.Add(this.btnLogOut);
             this.pnlShutDown.Controls.Add(this.btnShutDown);
             this.pnlShutDown.Controls.Add(this.btnSettings);
-            this.pnlShutDown.Location = new System.Drawing.Point(1437, 50);
-            this.pnlShutDown.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.pnlShutDown.Location = new System.Drawing.Point(1916, 62);
+            this.pnlShutDown.Margin = new System.Windows.Forms.Padding(4, 4, 13, 4);
             this.pnlShutDown.Name = "pnlShutDown";
-            this.pnlShutDown.Size = new System.Drawing.Size(154, 30);
+            this.pnlShutDown.Size = new System.Drawing.Size(205, 37);
             this.pnlShutDown.TabIndex = 13;
             // 
             // btnExit
@@ -225,9 +236,10 @@
             this.btnExit.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.SystemColors.Control;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(71, 59);
+            this.btnExit.Location = new System.Drawing.Point(95, 73);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(83, 28);
+            this.btnExit.Size = new System.Drawing.Size(111, 34);
             this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Exit";
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -242,9 +254,10 @@
             this.btnLogOut.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(71, 31);
+            this.btnLogOut.Location = new System.Drawing.Point(95, 38);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(83, 28);
+            this.btnLogOut.Size = new System.Drawing.Size(111, 34);
             this.btnLogOut.TabIndex = 5;
             this.btnLogOut.Text = "LogOut";
             this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -258,9 +271,10 @@
             this.btnShutDown.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShutDown.ForeColor = System.Drawing.Color.White;
             this.btnShutDown.Image = ((System.Drawing.Image)(resources.GetObject("btnShutDown.Image")));
-            this.btnShutDown.Location = new System.Drawing.Point(113, 1);
+            this.btnShutDown.Location = new System.Drawing.Point(151, 1);
+            this.btnShutDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnShutDown.Name = "btnShutDown";
-            this.btnShutDown.Size = new System.Drawing.Size(29, 29);
+            this.btnShutDown.Size = new System.Drawing.Size(39, 36);
             this.btnShutDown.TabIndex = 4;
             this.btnShutDown.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnShutDown.UseVisualStyleBackColor = true;
@@ -268,18 +282,19 @@
             // 
             // pnlWorkBoard
             // 
-            this.pnlWorkBoard.Location = new System.Drawing.Point(208, 184);
+            this.pnlWorkBoard.Location = new System.Drawing.Point(277, 226);
+            this.pnlWorkBoard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlWorkBoard.Name = "pnlWorkBoard";
-            this.pnlWorkBoard.Size = new System.Drawing.Size(1380, 665);
+            this.pnlWorkBoard.Size = new System.Drawing.Size(1840, 818);
             this.pnlWorkBoard.TabIndex = 14;
             // 
             // frmMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1591, 849);
+            this.ClientSize = new System.Drawing.Size(1924, 1045);
             this.ControlBox = false;
             this.Controls.Add(this.pnlWorkBoard);
             this.Controls.Add(this.pnlShutDown);
@@ -290,6 +305,7 @@
             this.Controls.Add(this._pnlBackGroundLeft);
             this.Controls.Add(this._pnlBackgroundUp);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMainMenu";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

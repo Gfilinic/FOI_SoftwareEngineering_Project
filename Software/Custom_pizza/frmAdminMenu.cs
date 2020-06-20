@@ -1,4 +1,5 @@
-﻿using System;
+﻿using frmAddIngredient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,7 +40,9 @@ namespace Custom_pizza
         private void btnIngredients_Click(object sender, EventArgs e)
         {
             ChangeCursor(btnIngredients.Location.Y + 20);
-
+            frmMenuIngredients frmMenuIngredients = new frmMenuIngredients();
+            mainMenu = ActiveForm as frmMainMenu;
+            mainMenu.OpenWorkBoard(frmMenuIngredients);
         }
 
         private void btnPizzaMenu_Click(object sender, EventArgs e)
