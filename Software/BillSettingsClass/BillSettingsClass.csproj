@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\r20--cconnan-lmrkonjic-gfilinic-tbracic-sjan-master\Software\DataBase\DataBase.csproj" />
+    <ProjectReference Include="..\..\..\r20--cconnan-lmrkonjic-gfilinic-tbracic-sjan-master\Software\UserSettingsClass\UserSettingsClass.csproj" />
+  </ItemGroup>
+
+</Project>
