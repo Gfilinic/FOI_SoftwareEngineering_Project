@@ -43,13 +43,13 @@
     <Compile Include="IngredientRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Database\DataBase.csproj">
-      <Project>{5FB3AB0A-3B3A-42C9-9E59-0041952D5746}</Project>
-      <Name>DataBase</Name>
-    </ProjectReference>
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System.Data" />
+    <ProjectReference Include="..\..\..\V1-ultime\Software\DataBase\DataBase.csproj">
+      <Project>{297ef97b-df30-4a1a-89bc-0e9be1c24879}</Project>
+      <Name>DataBase</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
