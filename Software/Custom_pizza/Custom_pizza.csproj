@@ -219,17 +219,17 @@
     <Folder Include="FormImages\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Pizza\project\BillSettingsClass\BillSettingsClass.csproj">
-      <Project>{41719fff-425d-4972-ab18-a24af38a79b6}</Project>
+    <ProjectReference Include="..\BillSettingsClass\BillSettingsClass.csproj">
+      <Project>{8d9d9493-93e0-45e0-a185-281dbec39eec}</Project>
       <Name>BillSettingsClass</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Pizza\project\IngredientSettingsClass\IngredientSettingsClass.csproj">
-      <Project>{4f786cc7-f95a-4d7f-b228-070ed7eab3db}</Project>
-      <Name>IngredientSettingsClass</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataBase\DataBase.csproj">
       <Project>{297ef97b-df30-4a1a-89bc-0e9be1c24879}</Project>
       <Name>DataBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IngredientSettingsClass\IngredientSettingsClass.csproj">
+      <Project>{4f786cc7-f95a-4d7f-b228-070ed7eab3db}</Project>
+      <Name>IngredientSettingsClass</Name>
     </ProjectReference>
     <ProjectReference Include="..\UserSettingsClass\UserSettingsClass.csproj">
       <Project>{fdd4bee9-9529-4cc9-8141-a39ee208227f}</Project>
