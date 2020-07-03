@@ -53,6 +53,7 @@
             this.lbNb = new System.Windows.Forms.Label();
             this.pbIngredient = new System.Windows.Forms.PictureBox();
             this.pbIngredientPizza = new System.Windows.Forms.PictureBox();
+            this.btnAbort = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIngredient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIngredientInPizza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIngredient)).BeginInit();
@@ -72,7 +73,7 @@
             this.dgvIngredient.RowHeadersWidth = 51;
             this.dgvIngredient.RowTemplate.Height = 24;
             this.dgvIngredient.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvIngredient.Size = new System.Drawing.Size(525, 231);
+            this.dgvIngredient.Size = new System.Drawing.Size(463, 231);
             this.dgvIngredient.TabIndex = 0;
             this.dgvIngredient.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvIngredient_CellClick);
             this.dgvIngredient.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvIngredient_CellDoubleClick);
@@ -240,7 +241,7 @@
             this.dgvIngredientInPizza.RowHeadersWidth = 51;
             this.dgvIngredientInPizza.RowTemplate.Height = 24;
             this.dgvIngredientInPizza.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvIngredientInPizza.Size = new System.Drawing.Size(525, 231);
+            this.dgvIngredientInPizza.Size = new System.Drawing.Size(463, 231);
             this.dgvIngredientInPizza.TabIndex = 23;
             this.dgvIngredientInPizza.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvIngredientInPizza_CellClick);
             this.dgvIngredientInPizza.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvIngredientInPizza_CellDoubleClick_1);
@@ -309,12 +310,25 @@
             this.pbIngredientPizza.TabIndex = 6;
             this.pbIngredientPizza.TabStop = false;
             // 
+            // btnAbort
+            // 
+            this.btnAbort.BackColor = System.Drawing.Color.Red;
+            this.btnAbort.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbort.Location = new System.Drawing.Point(1342, 660);
+            this.btnAbort.Name = "btnAbort";
+            this.btnAbort.Size = new System.Drawing.Size(175, 45);
+            this.btnAbort.TabIndex = 29;
+            this.btnAbort.Text = "Abort";
+            this.btnAbort.UseVisualStyleBackColor = false;
+            this.btnAbort.Click += new System.EventHandler(this.BtnAbort_Click_1);
+            // 
             // fmrCustomPizza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1819, 741);
+            this.Controls.Add(this.btnAbort);
             this.Controls.Add(this.lbNb);
             this.Controls.Add(this.btnMoins);
             this.Controls.Add(this.btnplus);
@@ -342,6 +356,7 @@
             this.Controls.Add(this.dgvIngredient);
             this.Name = "fmrCustomPizza";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FmrCustomPizza_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvIngredient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIngredientInPizza)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIngredient)).EndInit();
@@ -378,6 +393,7 @@
         private System.Windows.Forms.Button btnplus;
         private System.Windows.Forms.Button btnMoins;
         private System.Windows.Forms.Label lbNb;
+        private System.Windows.Forms.Button btnAbort;
     }
 }
 

@@ -80,6 +80,7 @@
             this.btnUpload.TabIndex = 28;
             this.btnUpload.Text = "Upload";
             this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.BtnUpload_Click_1);
             // 
             // lbMeasurement
             // 
@@ -174,6 +175,7 @@
             this.btnCancel.TabIndex = 17;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click_1);
             // 
             // btnSave
             // 
@@ -183,6 +185,7 @@
             this.btnSave.TabIndex = 16;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click_1);
             // 
             // frmAddNewIngredient
             // 

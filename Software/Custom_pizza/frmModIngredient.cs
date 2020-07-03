@@ -71,12 +71,12 @@ namespace frmAddIngredient
             Application.Run(new frmMenuIngredients());
         }
 
-        private void BtnCancel_Click_1(object sender, EventArgs e)
+        private void BtnCancel_Click(object sender, EventArgs e)
         {
             GoToMenu();
         }
 
-        private void BtnSave_Click_1(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (tbSelling_price_per_unit.Text != "")
             {
@@ -111,7 +111,7 @@ namespace frmAddIngredient
 
         }
 
-        private void BtnUpload_Click_1(object sender, EventArgs e)
+        private void BtnUpload_Click(object sender, EventArgs e)
         {
             try
             {

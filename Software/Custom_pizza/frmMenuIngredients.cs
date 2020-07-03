@@ -35,19 +35,14 @@ namespace frmAddIngredient
             { }
 
         }
-
-        private void BtnReturn_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void BtnAdd_Click(object sender, EventArgs e)
+        private void BtnAdd_Click_1(object sender, EventArgs e)
         {
 
             threadRegister = new Thread(OpenAddNewIngredient);
             threadRegister.SetApartmentState(ApartmentState.STA);
             threadRegister.Start();
         }
-        private void BtnModify_Click(object sender, EventArgs e)
+        private void BtnModify_Click_1(object sender, EventArgs e)
         {
 
             threadRegister = new Thread(OpenModIngredient);
@@ -55,7 +50,7 @@ namespace frmAddIngredient
             threadRegister.Start();
         }
 
-        private void BtnDelete_Click(object sender, EventArgs e)
+        private void BtnDelete_Click_1(object sender, EventArgs e)
         {
             if (dgvIngredient.CurrentRow != null)
             {
@@ -82,10 +77,11 @@ namespace frmAddIngredient
             Application.Run(new frmAddNewIngredient());
         }
 
-        private void BtnRefresh_Click(object sender, EventArgs e)
+        private void BtnRefresh_Click_1(object sender, EventArgs e)
         {
             ShowIngredients();
         }
+
 
         private void OpenModIngredient()
         {

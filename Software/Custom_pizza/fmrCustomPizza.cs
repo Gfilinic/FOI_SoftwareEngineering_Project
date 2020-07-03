@@ -33,6 +33,7 @@ namespace CustomPizza
 
         int currentBill;
         int nb = 1;
+        int tmp;
 
         public fmrCustomPizza(User currentUser, int currentBill)
         {
@@ -180,8 +181,7 @@ namespace CustomPizza
 
         private void Btnplus_Click(object sender, EventArgs e)
         {
-            int tmp;
-            reservedList = new List<Ingredient>();
+            reservedList.Clear();
             foreach (var ing in ingredient)
             {
                 ingredientRepository.FreeIngredient(ing, nb);
@@ -222,14 +222,31 @@ namespace CustomPizza
             ShowIngredientsInPizza_1();
         }
 
-        private void BtnAbort_Click(object sender, EventArgs e)
+        private void BtnAbort_Click_1(object sender, EventArgs e)
         {
-            Reset();
+            foreach (var ing in ingredient)
+            {
+               ingredientRepository.FreeIngredient(ing, nb);
+            }
+
+            ingredient.Clear();
+            reservedList.Clear();
+            nb = 1;
+            ShowIngredientsInPizza_1();
+            ShowIngredients();
+            pbIngredientPizza.Image = null;
+            lbMeasurementPizza.Text = "";
+            lbMeasurementPizza.Text = "";
+            lbUnitNumberPizza.Text = "";
+            lbSellingPricePerUnitPizza.Text = "";
+            lbNamePizza.Text = "";
+            lbNb.Text = $"Number of copies : {nb}";
+            MessageBox.Show($"Your command has been reset", "Warning Name", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         void Reset()
         {
-            if (reservedList.Count == 0)
+            if (reservedList.Count == 0 && tmp == 1)
             {
                 foreach (var ing in ingredient)
                 {
@@ -259,8 +276,7 @@ namespace CustomPizza
             MessageBox.Show($"Your command has been reset", "Warning Name", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
         }
-
-        private void FmrCustomPizza_Load(object sender, EventArgs e)
+        private void FmrCustomPizza_Load_1(object sender, EventArgs e)
         {
             ShowIngredients();
         }

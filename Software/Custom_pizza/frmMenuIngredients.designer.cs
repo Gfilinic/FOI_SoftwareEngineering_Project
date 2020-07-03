@@ -45,6 +45,7 @@
             this.btnRefresh.Size = new System.Drawing.Size(110, 110);
             this.btnRefresh.TabIndex = 10;
             this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click_1);
             // 
             // btnDelete
             // 
@@ -55,6 +56,7 @@
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click_1);
             // 
             // btnModify
             // 
@@ -65,6 +67,7 @@
             this.btnModify.TabIndex = 8;
             this.btnModify.Text = "Modify Ingredient";
             this.btnModify.UseVisualStyleBackColor = true;
+            this.btnModify.Click += new System.EventHandler(this.BtnModify_Click_1);
             // 
             // btnAdd
             // 
@@ -75,6 +78,7 @@
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add Ingredient";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click_1);
             // 
             // dgvIngredient
             // 
