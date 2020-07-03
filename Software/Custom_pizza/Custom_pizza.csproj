@@ -231,6 +231,18 @@
       <Project>{cf3ea461-abf8-464a-879f-5026ff464114}</Project>
       <Name>IngredientSettingsClass</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PizzaBillSettingsClass\PizzaBillSettingsClass.csproj">
+      <Project>{8253127c-d27c-4cc7-9cc0-25a2c02b38ad}</Project>
+      <Name>PizzaBillSettingsClass</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PizzaItemSettingsClass\PizzaItemSettingsClass.csproj">
+      <Project>{2d280748-a7ac-4c25-8058-9cc41278063d}</Project>
+      <Name>PizzaItemSettingsClass</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PizzaSettingsClass\PizzaSettingsClass.csproj">
+      <Project>{3970f0e2-981c-45ea-8ab9-3924d2ce0c2f}</Project>
+      <Name>PizzaSettingsClass</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UserSettingsClass\UserSettingsClass.csproj">
       <Project>{fdd4bee9-9529-4cc9-8141-a39ee208227f}</Project>
       <Name>UserSettingsClass</Name>

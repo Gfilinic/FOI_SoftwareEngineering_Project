@@ -36,20 +36,20 @@ namespace IngredientSettingsClass
             DataBaseI.Instance.Disconnect();
             return id;
         }
-        public void AddNewIngredientToDatabase(string name, decimal selling_price_per_unit, int unit_numbers, string imagePath,int id_measurement)
+        public void AddNewIngredientToDatabase(string name, decimal selling_price_per_unit, int unit_numbers, string imagePath, int id_measurement, int stock)
         {
             int idImage = AddIngredientImageToDatabase(imagePath);
-            string SQLcommand = $"INSERT INTO [Ingredient] (name, selling_price_per_unit, unit_numbers, id_measurement, id_image) VALUES ('{name}','{selling_price_per_unit}','{unit_numbers}','{id_measurement}','{idImage}');";
+            string SQLcommand = $"INSERT INTO [Ingredient] (name, selling_price_per_unit, unit_numbers, id_measurement, id_image, stock) VALUES ('{name}','{selling_price_per_unit}','{unit_numbers}','{id_measurement}','{idImage}','{stock}');";
             DataBaseI.Instance.Connect();
             DataBaseI.Instance.ExecuteCommand(SQLcommand);
             DataBaseI.Instance.Disconnect();
         }
-        public void ModIngredientToDatabase(string name, decimal selling_price_per_unit, int unit_numbers, string imagePath, int id_measurement)
+        public void ModIngredientToDatabase(string name, decimal selling_price_per_unit, int unit_numbers, string imagePath, int id_measurement, int stock)
         {
             if (imagePath != null)
             {
                 string SQLcommand1 = $"SELECT id_image FROM [Ingredient] WHERE id_ingredient ='{CheckIfIngredientExist(name)}';";
-                
+
 
                 DataBaseI.Instance.Connect();
                 int idOldImage = int.Parse(DataBaseI.Instance.GetValue(SQLcommand1).ToString());
@@ -57,18 +57,20 @@ namespace IngredientSettingsClass
 
                 int idNewImage = AddIngredientImageToDatabase(imagePath);
 
-                
+
                 string SQLcommand2 = $"UPDATE [Ingredient] SET selling_price_per_unit = TRY_CONVERT(decimal(5,2),{selling_price_per_unit}) WHERE id_ingredient = '{CheckIfIngredientExist(name)}';";
                 string SQLcommand3 = $"UPDATE [Ingredient] SET unit_numbers = '{unit_numbers}' WHERE id_ingredient = '{CheckIfIngredientExist(name)}';";
                 string SQLcommand4 = $"UPDATE [Ingredient] SET id_measurement = '{id_measurement}' WHERE id_ingredient = '{CheckIfIngredientExist(name)}';";
                 string SQLcommand5 = $"UPDATE [Ingredient] SET id_image = '{idNewImage}' WHERE id_ingredient = '{CheckIfIngredientExist(name)}';";
-                string SQLcommand6 = $"DELETE FROM [Image] WHERE id_image ='{idOldImage}';";
+                string SQLcommand6 = $"UPDATE [Ingredient] SET stock = '{stock}' WHERE id_ingredient = '{CheckIfIngredientExist(name)}';";
+                string SQLcommand7 = $"DELETE FROM [Image] WHERE id_image ='{idOldImage}';";
                 DataBaseI.Instance.Connect();
                 DataBaseI.Instance.ExecuteCommand(SQLcommand2);
                 DataBaseI.Instance.ExecuteCommand(SQLcommand3);
                 DataBaseI.Instance.ExecuteCommand(SQLcommand4);
                 DataBaseI.Instance.ExecuteCommand(SQLcommand5);
                 DataBaseI.Instance.ExecuteCommand(SQLcommand6);
+                DataBaseI.Instance.ExecuteCommand(SQLcommand7);
                 DataBaseI.Instance.Disconnect();
 
             }
@@ -77,10 +79,12 @@ namespace IngredientSettingsClass
                 string SQLcommand2 = $"UPDATE [Ingredient] SET selling_price_per_unit = TRY_CONVERT(decimal(5,2),{selling_price_per_unit}) WHERE id_ingredient = '{CheckIfIngredientExist(name)}';";
                 string SQLcommand3 = $"UPDATE [Ingredient] SET unit_numbers = '{unit_numbers}' WHERE id_ingredient = '{CheckIfIngredientExist(name)}';";
                 string SQLcommand4 = $"UPDATE [Ingredient] SET id_measurement = '{id_measurement}' WHERE id_ingredient = '{CheckIfIngredientExist(name)}';";
+                string SQLcommand5 = $"UPDATE [Ingredient] SET stock = '{stock}' WHERE id_ingredient = '{CheckIfIngredientExist(name)}';";
                 DataBaseI.Instance.Connect();
                 DataBaseI.Instance.ExecuteCommand(SQLcommand2);
                 DataBaseI.Instance.ExecuteCommand(SQLcommand3);
                 DataBaseI.Instance.ExecuteCommand(SQLcommand4);
+                DataBaseI.Instance.ExecuteCommand(SQLcommand5);
                 DataBaseI.Instance.Disconnect();
 
             }
@@ -111,7 +115,7 @@ namespace IngredientSettingsClass
         }
         public Ingredient GetIngredient(int ingredient_id)
         {
-            Ingredient ingredient_ = new Ingredient(0, null, null, 0, null, 0);
+            Ingredient ingredient_ = new Ingredient(0, null, null, 0, null, 0, 0);
             string SQLcommand = $"SELECT * FROM [Ingredient] WHERE id_ingredient={ingredient_id}";
             List<Ingredient> ingredients = new List<Ingredient>();
             DataBaseI.Instance.Connect();
@@ -124,11 +128,12 @@ namespace IngredientSettingsClass
                 int unit_number = (int)dataReader["unit_number"];
                 int id_measurement = (int)dataReader["id_measurement"];
                 int id_image = (int)dataReader["id_image"];
+                int stock = (int)dataReader["stock"];
 
                 Image Image = GetImage(id_image);
                 Measurement Measurement = GetMeasurement(id_measurement);
 
-                ingredient_ = new Ingredient(id_ingredient, name, Image, selling_price_per_unit, Measurement, unit_number);
+                ingredient_ = new Ingredient(id_ingredient, name, Image, selling_price_per_unit, Measurement, unit_number, stock);
             }
             dataReader.Close();
             DataBaseI.Instance.Disconnect();
@@ -176,12 +181,12 @@ namespace IngredientSettingsClass
             while (dataReader.Read())
             {
                 string MeasurmentDB = dataReader["measurement"].ToString();
-                if(MeasurmentDB == Measurement)
+                if (MeasurmentDB == Measurement)
                 {
                     id = int.Parse(dataReader["id_measurement"].ToString());
                     break;
                 }
-                    
+
             }
             dataReader.Close();
             DataBaseI.Instance.Disconnect();
@@ -197,18 +202,78 @@ namespace IngredientSettingsClass
             DataBaseI.Instance.ExecuteCommand(SQLcommand2);
             DataBaseI.Instance.Disconnect();
         }
-        public List<Ingredient> GetAllIngredient(List<Ingredient> List)
+        public List<Ingredient> GetAllIngredient()
         {
+            List<Ingredient> List = new List<Ingredient>();
             string SQLcommand = $"SELECT * FROM [Ingredient];";
             DataBaseI.Instance.Connect();
             IDataReader dataReader = DataBaseI.Instance.GetDataReader(SQLcommand);
             while (dataReader.Read())
             {
-                List.Add(new Ingredient(int.Parse(dataReader["id_ingredient"].ToString()), dataReader["name"].ToString(), GetImage(int.Parse(dataReader["id_image"].ToString())), decimal.Parse(dataReader["selling_price_per_unit"].ToString()), GetMeasurement(int.Parse(dataReader["id_measurement"].ToString())), int.Parse(dataReader["unit_numbers"].ToString())));
+                List.Add(new Ingredient(int.Parse(dataReader["id_ingredient"].ToString()), dataReader["name"].ToString(), GetImage(int.Parse(dataReader["id_image"].ToString())), decimal.Parse(dataReader["selling_price_per_unit"].ToString()), GetMeasurement(int.Parse(dataReader["id_measurement"].ToString())), int.Parse(dataReader["unit_numbers"].ToString()), int.Parse(dataReader["stock"].ToString())));
             }
             dataReader.Close();
             DataBaseI.Instance.Disconnect();
             return List;
+        }
+
+        public bool CheckIfInStock(Ingredient ingredient, int nb)
+        {
+            string SQLcommand1 = $"SELECT stock FROM [Ingredient] WHERE id_ingredient = '{ingredient.Id_ingredient}';";
+            string SQLcommand2 = $"SELECT unit_numbers FROM [Ingredient] WHERE id_ingredient = '{ingredient.Id_ingredient}';";
+
+            DataBaseI.Instance.Connect();
+
+            int stock = (int)DataBaseI.Instance.GetValue(SQLcommand1);
+            int unit_numbers = (int)DataBaseI.Instance.GetValue(SQLcommand2);
+
+            DataBaseI.Instance.Disconnect();
+
+            if (stock < unit_numbers * nb)
+                return false;
+            else
+                return true;
+        }
+
+        public int ReserveIngredient(Ingredient ingredient, int nb)
+        {
+            string SQLcommand1 = $"SELECT stock FROM [Ingredient] WHERE id_ingredient = '{ingredient.Id_ingredient}';";
+
+            DataBaseI.Instance.Connect();
+            int stock = (int)DataBaseI.Instance.GetValue(SQLcommand1);
+            DataBaseI.Instance.Disconnect();
+            int unit_numbers = ingredient.Unit_numbers;
+
+            string SQLcommand2 = $"UPDATE [Ingredient] SET stock = '{stock - (unit_numbers * nb)}' WHERE id_ingredient = '{CheckIfIngredientExist(ingredient.Name)}';";
+
+            if (CheckIfInStock(ingredient, nb))
+            {
+                DataBaseI.Instance.Connect();
+                DataBaseI.Instance.ExecuteCommand(SQLcommand2);
+                DataBaseI.Instance.Disconnect();
+                return 1;
+            }
+            else
+            {
+                DataBaseI.Instance.Disconnect();
+                return 0;
+            }
+
+
+        }
+
+        public void FreeIngredient(Ingredient ingredient, int nb)
+        {
+            string SQLcommand1 = $"SELECT stock FROM [Ingredient] WHERE id_ingredient = '{ingredient.Id_ingredient}';";
+
+            DataBaseI.Instance.Connect();
+            int stock = (int)DataBaseI.Instance.GetValue(SQLcommand1);
+            DataBaseI.Instance.Disconnect();
+
+            string SQLcommand2 = $"UPDATE [Ingredient] SET stock = '{stock + (ingredient.Unit_numbers * nb)}' WHERE id_ingredient = '{CheckIfIngredientExist(ingredient.Name)}';";
+            DataBaseI.Instance.Connect();
+            DataBaseI.Instance.ExecuteCommand(SQLcommand2);
+            DataBaseI.Instance.Disconnect();
         }
     }
 

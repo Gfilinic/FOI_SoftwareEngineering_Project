@@ -17,7 +17,9 @@ namespace IngredientSettingsClass
         public Measurement Measurement { get; set; }
         public int Unit_numbers { get; set; }
 
-        public Ingredient(int id_ingredient, string name, Image ingredientImage, decimal selling_price_per_unit, Measurement measurement, int unit_numbers)
+        public int Stock { get; set; }
+
+        public Ingredient(int id_ingredient, string name, Image ingredientImage, decimal selling_price_per_unit, Measurement measurement, int unit_numbers, int stock)
         {
             Id_ingredient = id_ingredient;
             Name = name;
@@ -25,6 +27,7 @@ namespace IngredientSettingsClass
             Selling_price_per_unit = selling_price_per_unit;
             Measurement = measurement;
             Unit_numbers = unit_numbers;
+            Stock = stock;
         }
 
     }

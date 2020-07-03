@@ -38,23 +38,21 @@ namespace frmAddIngredient
 
         private void BtnReturn_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            
+
             threadRegister = new Thread(OpenAddNewIngredient);
             threadRegister.SetApartmentState(ApartmentState.STA);
             threadRegister.Start();
-            //Close();
         }
         private void BtnModify_Click(object sender, EventArgs e)
         {
-            
+
             threadRegister = new Thread(OpenModIngredient);
             threadRegister.SetApartmentState(ApartmentState.STA);
             threadRegister.Start();
-            //Close();
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -73,10 +71,10 @@ namespace frmAddIngredient
         void ShowIngredients()
         {
             List<Ingredient> List = new List<Ingredient>();
-            List = ingredientRepository.GetAllIngredient(List);
+            List = ingredientRepository.GetAllIngredient();
 
             dgvIngredient.DataSource = List;
-            
+
         }
 
         private void OpenAddNewIngredient()
@@ -91,7 +89,7 @@ namespace frmAddIngredient
 
         private void OpenModIngredient()
         {
-            if(dgvIngredient.CurrentRow != null)
+            if (dgvIngredient.CurrentRow != null)
             {
                 Ingredient ingredient = dgvIngredient.CurrentRow.DataBoundItem as Ingredient;
                 Application.Run(new frmModIngredient(ingredient));
@@ -101,7 +99,7 @@ namespace frmAddIngredient
                 MessageBox.Show("Please select a row", "Warning Name", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Application.Run(new frmMenuIngredients());
             }
-            
+
         }
     }
 }

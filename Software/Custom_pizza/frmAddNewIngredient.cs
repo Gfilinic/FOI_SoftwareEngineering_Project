@@ -16,13 +16,11 @@ using System.Windows.Forms;
 
 namespace frmAddIngredient
 {
-    
+
     public partial class frmAddNewIngredient : Form
     {
         IngredientRepository ingredientRepository = new IngredientRepository();
         string Imagepath;
-
-        Thread threadMenu;
 
         public frmAddNewIngredient()
         {
@@ -31,24 +29,31 @@ namespace frmAddIngredient
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
-        {            
+        {
             GoToMenu();
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            if(tbName.Text != "")
+            if (tbName.Text != "")
             {
-                if(tbSelling_price_per_unit.Text != "")
+                if (tbSelling_price_per_unit.Text != "")
                 {
-                    if(tbUnit_number.Text != "")
+                    if (tbUnit_number.Text != "")
                     {
-                        if(Imagepath != "")
+                        if (Imagepath != "")
                         {
-                            if(lbMeasurement.SelectedItem.ToString() != "")
+                            if (lbMeasurement.SelectedItem.ToString() != "")
                             {
-                                ingredientRepository.AddNewIngredientToDatabase(tbName.Text, decimal.Parse(tbSelling_price_per_unit.Text), int.Parse(tbUnit_number.Text), Imagepath, ingredientRepository.GetIdMeasurement(lbMeasurement.SelectedItem.ToString()));
-                                GoToMenu();
+                                if (tbStock.Text != "")
+                                {
+                                    ingredientRepository.AddNewIngredientToDatabase(tbName.Text, decimal.Parse(tbSelling_price_per_unit.Text), int.Parse(tbUnit_number.Text), Imagepath, ingredientRepository.GetIdMeasurement(lbMeasurement.SelectedItem.ToString()), int.Parse(tbStock.Text));
+                                    GoToMenu();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Please write a stock number", "Warning Name", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                }
                             }
                             else
                             {
@@ -74,8 +79,8 @@ namespace frmAddIngredient
             {
                 MessageBox.Show("Please write a name", "Warning Name", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            
-            
+
+
         }
 
         private void BtnUpload_Click(object sender, EventArgs e)
@@ -108,13 +113,13 @@ namespace frmAddIngredient
             while (dataReader.Read())
             {
                 tmp.Add(dataReader["measurement"].ToString());
-                
-                
+
+
             }
             lbMeasurement.DataSource = tmp;
             dataReader.Close();
             DataBaseI.Instance.Disconnect();
-            
+
         }
 
         void GoToMenu()
