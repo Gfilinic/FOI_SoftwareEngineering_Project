@@ -34,6 +34,9 @@ namespace Custom_pizza
         private void btnActions_Click(object sender, EventArgs e)
         {
             ChangeCursor(btnActions.Location.Y+20);
+            frmDiscountMenu frmDiscount = new frmDiscountMenu();
+            mainMenu = ActiveForm as frmMainMenu;
+            mainMenu.OpenWorkBoard(frmDiscount);
 
         }
 

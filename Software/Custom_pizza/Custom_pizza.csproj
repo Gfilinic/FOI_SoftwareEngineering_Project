@@ -64,6 +64,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAddNewDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddNewDiscount.Designer.cs">
+      <DependentUpon>frmAddNewDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDiscountMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDiscountMenu.Designer.cs">
+      <DependentUpon>frmDiscountMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="fmrCustomPizza.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +130,12 @@
     <Compile Include="frmMenuIngredients.designer.cs">
       <DependentUpon>frmMenuIngredients.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmModDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModDiscount.Designer.cs">
+      <DependentUpon>frmModDiscount.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmModIngredient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +168,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddNewDiscount.resx">
+      <DependentUpon>frmAddNewDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDiscountMenu.resx">
+      <DependentUpon>frmDiscountMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fmrCustomPizza.resx">
       <DependentUpon>fmrCustomPizza.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuIngredients.resx">
       <DependentUpon>frmMenuIngredients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModDiscount.resx">
+      <DependentUpon>frmModDiscount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmModIngredient.resx">
       <DependentUpon>frmModIngredient.cs</DependentUpon>
@@ -227,6 +254,10 @@
       <Project>{297ef97b-df30-4a1a-89bc-0e9be1c24879}</Project>
       <Name>DataBase</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DiscountSettingsClass\DiscountSettingsClass.csproj">
+      <Project>{00312123-1603-41FA-8DD4-7F3E1AE95C56}</Project>
+      <Name>DiscountSettingsClass</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IngredientSettingsClass\IngredientSettingsClass.csproj">
       <Project>{cf3ea461-abf8-464a-879f-5026ff464114}</Project>
       <Name>IngredientSettingsClass</Name>
@@ -262,6 +293,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\refresh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

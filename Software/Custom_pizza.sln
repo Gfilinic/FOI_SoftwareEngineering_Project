@@ -13,11 +13,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillSettingsClass", "BillSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IngredientSettingsClass", "IngredientSettingsClass\IngredientSettingsClass.csproj", "{CF3EA461-ABF8-464A-879F-5026FF464114}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaSettingsClass", "PizzaSettingsClass\PizzaSettingsClass.csproj", "{3970F0E2-981C-45EA-8AB9-3924D2CE0C2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaSettingsClass", "PizzaSettingsClass\PizzaSettingsClass.csproj", "{3970F0E2-981C-45EA-8AB9-3924D2CE0C2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaItemSettingsClass", "PizzaItemSettingsClass\PizzaItemSettingsClass.csproj", "{2D280748-A7AC-4C25-8058-9CC41278063D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaItemSettingsClass", "PizzaItemSettingsClass\PizzaItemSettingsClass.csproj", "{2D280748-A7AC-4C25-8058-9CC41278063D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaBillSettingsClass", "PizzaBillSettingsClass\PizzaBillSettingsClass.csproj", "{8253127C-D27C-4CC7-9CC0-25A2C02B38AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaBillSettingsClass", "PizzaBillSettingsClass\PizzaBillSettingsClass.csproj", "{8253127C-D27C-4CC7-9CC0-25A2C02B38AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscountSettingsClass", "DiscountSettingsClass\DiscountSettingsClass.csproj", "{00312123-1603-41FA-8DD4-7F3E1AE95C56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{8253127C-D27C-4CC7-9CC0-25A2C02B38AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8253127C-D27C-4CC7-9CC0-25A2C02B38AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8253127C-D27C-4CC7-9CC0-25A2C02B38AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00312123-1603-41FA-8DD4-7F3E1AE95C56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00312123-1603-41FA-8DD4-7F3E1AE95C56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00312123-1603-41FA-8DD4-7F3E1AE95C56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00312123-1603-41FA-8DD4-7F3E1AE95C56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
