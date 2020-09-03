@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataBase;
 using DiscountSettingsClass;
+using Custom_pizza.HelpForms;
 
 namespace Custom_pizza
 {
@@ -93,6 +94,16 @@ namespace Custom_pizza
                 MessageBox.Show("Please select a row", "Warning Name", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             ShowDiscounts();
+        }
+
+        private void frmDiscountMenu_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                frmHelp_DiscountMenu frmHelp = new frmHelp_DiscountMenu();
+                frmHelp.ShowDialog();
+
+            }
         }
 
         private void ShowDiscounts()

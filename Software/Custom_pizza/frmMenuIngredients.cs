@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using Custom_pizza.HelpForms;
 
 namespace frmAddIngredient
 {
@@ -82,6 +83,15 @@ namespace frmAddIngredient
             ShowIngredients();
         }
 
+        private void frmMenuIngredients_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                frmHelp_MenuIngredients frmHelp = new frmHelp_MenuIngredients();
+                frmHelp.ShowDialog();
+
+            }
+        }
 
         private void OpenModIngredient()
         {

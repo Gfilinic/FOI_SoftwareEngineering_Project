@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Custom_pizza.HelpForms;
 namespace Custom_pizza
 {
     public partial class frmAddNewDiscount : Form
@@ -88,7 +89,17 @@ namespace Custom_pizza
             }
          
         }
-   }
+
+        private void frmAddNewDiscount_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                frmHelp_AddNewDiscount frmHelp = new frmHelp_AddNewDiscount();
+                frmHelp.ShowDialog();
+
+            }
+        }
+    }
 }
     
 

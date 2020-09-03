@@ -15,6 +15,8 @@ using BillSettingsClass;
 using PizzaSettingsClass;
 using PizzaItemSettingsClass;
 using PizzaBillSettingsClass;
+using Custom_pizza;
+using Custom_pizza.HelpForms;
 
 namespace CustomPizza
 {
@@ -279,6 +281,17 @@ namespace CustomPizza
         private void FmrCustomPizza_Load_1(object sender, EventArgs e)
         {
             ShowIngredients();
+        }
+
+        private void fmrCustomPizza_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+            if (e.KeyCode == Keys.F1)
+            {
+                frmHelp_CustomPizza frmHelp = new frmHelp_CustomPizza();
+                frmHelp.ShowDialog();
+
+            }
         }
     }
 }

@@ -30,9 +30,9 @@
         {
             this.btnAddDiscount = new System.Windows.Forms.Button();
             this.dgvDiscount = new System.Windows.Forms.DataGridView();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.btnModify = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscount)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,18 +58,6 @@
             this.dgvDiscount.Size = new System.Drawing.Size(413, 338);
             this.dgvDiscount.TabIndex = 1;
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.Image = global::Custom_pizza.Properties.Resources.refresh1;
-            this.btnRefresh.Location = new System.Drawing.Point(222, 35);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(82, 89);
-            this.btnRefresh.TabIndex = 11;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
             // btnModify
             // 
             this.btnModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -94,6 +82,18 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.Image = global::Custom_pizza.Properties.Resources.refresh1;
+            this.btnRefresh.Location = new System.Drawing.Point(222, 35);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(82, 89);
+            this.btnRefresh.TabIndex = 11;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // frmDiscountMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -104,8 +104,10 @@
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.dgvDiscount);
             this.Controls.Add(this.btnAddDiscount);
+            this.KeyPreview = true;
             this.Name = "frmDiscountMenu";
             this.Text = "Discount";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmDiscountMenu_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscount)).EndInit();
             this.ResumeLayout(false);
 

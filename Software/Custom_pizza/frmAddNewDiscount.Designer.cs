@@ -138,6 +138,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(385, 373);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
@@ -200,8 +201,10 @@
             this.Controls.Add(this.rtbDescription);
             this.Controls.Add(this.txtName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.KeyPreview = true;
             this.Name = "frmAddNewDiscount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmAddNewDiscount_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pbDiscount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

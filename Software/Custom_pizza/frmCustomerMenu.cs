@@ -58,7 +58,10 @@ namespace Custom_pizza
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
-            ChangeCursor(btnAbout.Location.Y + 20);
+            MessageBox.Show("Custom Pizzas -> Create your own pizza with a form \n \n" +
+                "Preset Pizzas -> Select from the preset pizzas (work in progress) \n \n" +
+                "Time Till Delivery -> Check the time until your delivery (work in progress) \n \n" +
+                "Press F1 for detailed instruction on the selected Form", "About Main Page");
 
         }
     }

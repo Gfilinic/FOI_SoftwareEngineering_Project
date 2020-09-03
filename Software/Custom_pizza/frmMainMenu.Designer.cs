@@ -103,7 +103,7 @@
             this.picUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.picUser.Location = new System.Drawing.Point(0, 0);
             this.picUser.Name = "picUser";
-            this.picUser.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.picUser.Padding = new System.Windows.Forms.Padding(10);
             this.picUser.Size = new System.Drawing.Size(202, 173);
             this.picUser.TabIndex = 12;
             this.picUser.TabStop = false;
