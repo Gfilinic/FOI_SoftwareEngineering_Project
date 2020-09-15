@@ -12,8 +12,8 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-
+using System.Windows.Forms; 
+using Custom_pizza.HelpForms;
 namespace frmAddIngredient
 {
 
@@ -130,6 +130,16 @@ namespace frmAddIngredient
         void OpenMenu()
         {
             Application.Run(new frmMenuIngredients());
+        }
+
+        private void frmAddNewIngredient_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                frmHelp_AddNew frmHelp = new frmHelp_AddNew();
+                frmHelp.ShowDialog();
+
+            }
         }
     }
 }

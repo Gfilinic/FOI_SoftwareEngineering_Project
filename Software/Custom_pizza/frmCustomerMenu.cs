@@ -16,6 +16,8 @@ namespace Custom_pizza
     public partial class frmCustomerMenu : Form
     {
         frmMainMenu mainMenu;
+        
+        
         User currentUser;
         int idBill;
         public frmCustomerMenu(User currentUser, int idBill)
@@ -46,8 +48,11 @@ namespace Custom_pizza
 
         private void btnPresetPizzas_Click(object sender, EventArgs e)
         {
+            
             ChangeCursor(btnPresetPizzas.Location.Y + 20);
-
+            frmPresetPizza frmPresetPizza = new frmPresetPizza();
+            mainMenu = ActiveForm as frmMainMenu;
+            mainMenu.OpenWorkBoard(frmPresetPizza);
         }
 
         private void btnTimeTillDelivery_Click(object sender, EventArgs e)

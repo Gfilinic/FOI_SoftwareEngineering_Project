@@ -40,8 +40,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.pbDiscount = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.pbDiscount = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbDiscount)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,16 +159,6 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // pbDiscount
-            // 
-            this.pbDiscount.Location = new System.Drawing.Point(561, 21);
-            this.pbDiscount.Margin = new System.Windows.Forms.Padding(2);
-            this.pbDiscount.Name = "pbDiscount";
-            this.pbDiscount.Size = new System.Drawing.Size(188, 207);
-            this.pbDiscount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbDiscount.TabIndex = 30;
-            this.pbDiscount.TabStop = false;
-            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
@@ -178,6 +168,17 @@
             this.lblTitle.Size = new System.Drawing.Size(231, 23);
             this.lblTitle.TabIndex = 35;
             this.lblTitle.Text = "Add new Discount ";
+            // 
+            // pbDiscount
+            // 
+            this.pbDiscount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbDiscount.Location = new System.Drawing.Point(561, 21);
+            this.pbDiscount.Margin = new System.Windows.Forms.Padding(2);
+            this.pbDiscount.Name = "pbDiscount";
+            this.pbDiscount.Size = new System.Drawing.Size(188, 207);
+            this.pbDiscount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbDiscount.TabIndex = 30;
+            this.pbDiscount.TabStop = false;
             // 
             // frmAddNewDiscount
             // 

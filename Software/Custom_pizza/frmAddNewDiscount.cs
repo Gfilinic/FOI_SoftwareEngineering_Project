@@ -94,7 +94,7 @@ namespace Custom_pizza
         {
             if (e.KeyCode == Keys.F1)
             {
-                frmHelp_AddNewDiscount frmHelp = new frmHelp_AddNewDiscount();
+                frmHelp_AddNew frmHelp = new frmHelp_AddNew();
                 frmHelp.ShowDialog();
 
             }

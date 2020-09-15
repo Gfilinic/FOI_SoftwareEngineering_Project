@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Custom_pizza.HelpForms
 {
-    public partial class frmHelp_AddNewDiscount : Form
+    public partial class frmHelp_AddNew : Form
     {
-        public frmHelp_AddNewDiscount()
+        public frmHelp_AddNew()
         {
             InitializeComponent();
         }

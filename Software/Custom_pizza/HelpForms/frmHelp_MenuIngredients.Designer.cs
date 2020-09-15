@@ -44,11 +44,11 @@
             // btnOK
             // 
             this.btnOK.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOK.Location = new System.Drawing.Point(275, 372);
+            this.btnOK.Location = new System.Drawing.Point(214, 375);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(94, 41);
+            this.btnOK.Size = new System.Drawing.Size(155, 41);
             this.btnOK.TabIndex = 25;
-            this.btnOK.Text = "OK";
+            this.btnOK.Text = "I understand";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 

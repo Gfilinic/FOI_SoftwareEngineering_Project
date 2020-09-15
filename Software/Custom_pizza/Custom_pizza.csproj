@@ -70,6 +70,12 @@
     <Compile Include="frmAddNewDiscount.Designer.cs">
       <DependentUpon>frmAddNewDiscount.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfirm.Designer.cs">
+      <DependentUpon>frmConfirm.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDiscountMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,12 @@
     <Compile Include="frmOptions.Designer.cs">
       <DependentUpon>frmOptions.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPresetPizza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPresetPizza.Designer.cs">
+      <DependentUpon>frmPresetPizza.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,11 +178,11 @@
     <Compile Include="frmWorkerMenu.Designer.cs">
       <DependentUpon>frmWorkerMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="HelpForms\frmHelp_AddNewDiscount.cs">
+    <Compile Include="HelpForms\frmHelp_AddNew.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HelpForms\frmHelp_AddNewDiscount.Designer.cs">
-      <DependentUpon>frmHelp_AddNewDiscount.cs</DependentUpon>
+    <Compile Include="HelpForms\frmHelp_AddNew.Designer.cs">
+      <DependentUpon>frmHelp_AddNew.cs</DependentUpon>
     </Compile>
     <Compile Include="HelpForms\frmHelp_CustomPizza.cs">
       <SubType>Form</SubType>
@@ -190,10 +202,19 @@
     <Compile Include="HelpForms\frmHelp_MenuIngredients.Designer.cs">
       <DependentUpon>frmHelp_MenuIngredients.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelpForms\FrmHelp_PresetPizza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpForms\FrmHelp_PresetPizza.Designer.cs">
+      <DependentUpon>FrmHelp_PresetPizza.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAddNewDiscount.resx">
       <DependentUpon>frmAddNewDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfirm.resx">
+      <DependentUpon>frmConfirm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDiscountMenu.resx">
       <DependentUpon>frmDiscountMenu.cs</DependentUpon>
@@ -234,6 +255,9 @@
     <EmbeddedResource Include="frmOptions.resx">
       <DependentUpon>frmOptions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPresetPizza.resx">
+      <DependentUpon>frmPresetPizza.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRegistration.resx">
       <DependentUpon>frmRegistration.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,8 +267,8 @@
     <EmbeddedResource Include="frmWorkerMenu.resx">
       <DependentUpon>frmWorkerMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HelpForms\frmHelp_AddNewDiscount.resx">
-      <DependentUpon>frmHelp_AddNewDiscount.cs</DependentUpon>
+    <EmbeddedResource Include="HelpForms\frmHelp_AddNew.resx">
+      <DependentUpon>frmHelp_AddNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HelpForms\frmHelp_CustomPizza.resx">
       <DependentUpon>frmHelp_CustomPizza.cs</DependentUpon>
@@ -254,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HelpForms\frmHelp_MenuIngredients.resx">
       <DependentUpon>frmHelp_MenuIngredients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpForms\FrmHelp_PresetPizza.resx">
+      <DependentUpon>FrmHelp_PresetPizza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -332,6 +359,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\refresh2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capricciosa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Margarita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlTonno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuatroFormaggi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuatroStagioni.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

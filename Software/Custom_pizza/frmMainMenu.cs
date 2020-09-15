@@ -90,6 +90,7 @@ namespace Custom_pizza
             newForm.BringToFront();
             newForm.Show();
         }
+        
 
         private void btnShutDown_Click(object sender, EventArgs e)
         {
